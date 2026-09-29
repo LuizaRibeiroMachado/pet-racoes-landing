@@ -4,621 +4,433 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Pet Rações — Atacado e Varejo | Tudo para o seu pet em Goiânia</title>
-<meta name="description" content="Pet Rações Atacado e Varejo em Goiânia. Rações premium, petiscos, remédios, acessórios e higiene para cães e gatos. Atendimento nota 5,0. Peça pelo WhatsApp.">
-<link rel="icon" href="assets/logo.png">
+<meta name="description" content="Pet Rações Atacado e Varejo em Goiânia. Rações premium, petiscos, remédios, acessórios e higiene para cães e gatos. Peça pelo WhatsApp.">
+<link rel="canonical" href="https://petracoesatacado.com.br/">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="pt_BR">
+<meta property="og:title" content="Pet Rações — Atacado e Varejo">
+<meta property="og:description" content="Tudo para o seu pet, com preço de atacado e varejo. Av. Padre Wendel, 1078 — São José, Goiânia.">
+<meta property="og:url" content="https://petracoesatacado.com.br/">
+<meta property="og:image" content="https://petracoesatacado.com.br/assets/loja-corredor.jpeg">
+<meta name="theme-color" content="#0B2A4A">
+<link rel="icon" type="image/png" sizes="32x32" href="assets/favicon-32.png">
+<link rel="icon" type="image/png" sizes="192x192" href="assets/icon-192.png">
+<link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
 
-<!-- Tipografia: Sora (display) · Plus Jakarta Sans (texto) · Fraunces (acento editorial) -->
+<!-- Tipografia: Bricolage Grotesque (títulos) · Plus Jakarta Sans (texto) -->
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@1,9..144,500;1,9..144,600&family=Montserrat:wght@700;800;900&family=Plus+Jakarta+Sans:wght@400;500;600;700&family=Sora:wght@500;600;700;800&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,600;12..96,700&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="preload" as="image" href="assets/loja-corredor.jpeg">
 
 <style>
 /* ============================================================
    IDENTIDADE VISUAL — PET RAÇÕES
-   Azul da marca + dourado discreto + creme quente premium
+   Cores tiradas da logo: azul "Pet", verde "Rações", amarelo da patinha
    ============================================================ */
 :root{
-  --azul:        #1668C9;   /* azul principal da logo */
-  --azul-600:    #1C73D8;
-  --azul-700:    #0F58B0;
-  --navy:        #0B2A4A;   /* azul profundo (textos/seções escuras) */
-  --navy-900:    #071E37;
-  --azure:       #5AA0F2;   /* azul claro / brilhos */
-  --gold:        #D89A36;   /* dourado discreto (selos, estrelas) */
-  --gold-soft:   #F0C36B;
-  --green:       #6FB23F;   /* verde da logo (detalhe) */
+  --azul:      #1B5FAA;
+  --azul-700:  #144A87;
+  --azul-50:   #EAF1FA;
+  --navy:      #0B2A4A;
+  --navy-900:  #081F38;
+  --verde:     #2E9E48;
+  --amarelo:   #F4C21F;
+  --zap:       #1FA855;
+  --zap-700:   #178A45;
 
-  --cream:       #FAF7F1;   /* fundo quente (substitui o branco frio) */
-  --cream-2:     #F4EFE6;   /* seção alternada */
-  --card:        #FFFFFF;
-  --ink:         #122436;   /* texto principal */
-  --muted:       #5C6B7C;   /* texto suave */
-  --line:        #E9E3D7;   /* bordas quentes */
-  --line-cool:   #E5EBF2;
+  --bg:        #FAF8F4;
+  --bg-2:      #F3EFE8;
+  --card:      #FFFFFF;
+  --ink:       #13253A;
+  --muted:     #5A6878;
+  --line:      #E6E0D6;
 
-  --shadow-sm:   0 2px 10px rgba(11,42,74,.06);
-  --shadow:      0 18px 50px -22px rgba(11,42,74,.28);
-  --shadow-lg:   0 40px 80px -30px rgba(11,42,74,.45);
-  --r:           22px;
-  --r-sm:        14px;
-  --max:         1180px;
-  --ease:        cubic-bezier(.22,.61,.36,1);
+  --r:   16px;
+  --r-sm:10px;
+  --max: 1200px;
+  --ease: cubic-bezier(.22,.61,.36,1);
+  --display: 'Bricolage Grotesque', 'Plus Jakarta Sans', system-ui, sans-serif;
 }
 
 *{margin:0;padding:0;box-sizing:border-box}
-html{scroll-behavior:smooth;scroll-padding-top:96px;-webkit-text-size-adjust:100%;overflow-x:hidden;max-width:100%}
+html{scroll-behavior:smooth;scroll-padding-top:84px;-webkit-text-size-adjust:100%}
 body{
   font-family:'Plus Jakarta Sans',system-ui,-apple-system,sans-serif;
-  color:var(--ink);background:var(--cream);line-height:1.7;
+  font-size:17px;line-height:1.65;color:var(--ink);background:var(--bg);
   -webkit-font-smoothing:antialiased;overflow-x:hidden;
-  font-size:16.5px;
 }
-/* textura sutil de grão para tirar o "liso de template" */
-body::before{
-  content:"";position:fixed;inset:0;z-index:9999;pointer-events:none;opacity:.025;
-  background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='2'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
-}
-h1,h2,h3,h4{font-family:'Sora',sans-serif;color:var(--ink);line-height:1.1;letter-spacing:-.02em;font-weight:700}
-.accent{font-family:'Fraunces',serif;font-style:italic;font-weight:600}
+h1,h2,h3{font-family:var(--display);font-weight:700;color:var(--ink);letter-spacing:-.018em;line-height:1.1;font-variation-settings:"opsz" 96}
+h3{letter-spacing:-.015em;line-height:1.2;font-variation-settings:"opsz" 24}
 img{display:block;max-width:100%;height:auto}
-a{text-decoration:none;color:inherit}
-.container{max-width:var(--max);margin:0 auto;padding:0 clamp(16px,4.5vw,24px)}
-section{scroll-margin-top:90px;position:relative}
+a{color:inherit;text-decoration:none}
+.container{max-width:var(--max);margin:0 auto;padding:0 clamp(16px,4vw,32px)}
+.ico{width:20px;height:20px;flex-shrink:0;fill:currentColor}
 
-/* ============ EYEBROW / TÍTULOS DE SEÇÃO ============ */
+/* ---------- títulos de seção ---------- */
 .eyebrow{
-  display:inline-flex;align-items:center;gap:9px;
-  font-family:'Sora';font-weight:600;font-size:.74rem;letter-spacing:.18em;
-  text-transform:uppercase;color:var(--azul-700);margin-bottom:18px;
+  display:block;font-size:.78rem;font-weight:700;letter-spacing:.14em;text-transform:uppercase;
+  color:var(--azul);margin-bottom:14px;
 }
-.eyebrow::before{content:"";width:26px;height:1.5px;background:var(--gold);display:inline-block}
-.eyebrow.center{justify-content:center}
-.sec-head{text-align:center;max-width:680px;margin:0 auto 60px}
-.sec-head h2{font-size:clamp(2rem,4.4vw,3rem);font-weight:800;margin-bottom:16px}
-.sec-head p{color:var(--muted);font-size:1.1rem;max-width:580px;margin:0 auto}
-.sec-head p strong{color:var(--azul-700);font-weight:700}
-.display{font-size:clamp(2.1rem,4.4vw,3rem);font-weight:800}
+.sec{padding:clamp(64px,8vw,104px) 0}
+.sec-head{max-width:760px;margin-bottom:44px}
+.sec-head.center{text-align:center;margin-left:auto;margin-right:auto}
+.sec-head h2,.h2{font-size:clamp(1.9rem,3.4vw,2.7rem)}
+.sec-head p{color:var(--muted);font-size:1.08rem;margin-top:14px}
 
-/* ============ BOTÕES ============ */
+/* ---------- botões ---------- */
 .btn{
-  position:relative;display:inline-flex;align-items:center;justify-content:center;gap:10px;
-  font-family:'Sora';font-weight:600;font-size:.98rem;letter-spacing:-.01em;
-  padding:15px 30px;border-radius:60px;border:1.5px solid transparent;cursor:pointer;
-  transition:transform .3s var(--ease),box-shadow .3s var(--ease),background .25s,color .25s,border-color .25s;
-  min-height:54px;line-height:1;white-space:nowrap;overflow:hidden;
+  display:inline-flex;align-items:center;justify-content:center;gap:10px;
+  font:600 1rem/1 'Plus Jakarta Sans',sans-serif;letter-spacing:-.005em;
+  padding:0 26px;height:52px;border-radius:12px;border:1.5px solid transparent;cursor:pointer;white-space:nowrap;
+  transition:background .2s,border-color .2s,color .2s,transform .2s var(--ease);
 }
-.btn svg{width:20px;height:20px;flex-shrink:0}
-.btn-zap{background:#1FAE54;color:#fff;box-shadow:0 14px 30px -10px rgba(31,174,84,.6)}
-.btn-zap:hover{transform:translateY(-3px);box-shadow:0 20px 38px -10px rgba(31,174,84,.7)}
-.btn-azul{background:var(--azul);color:#fff;box-shadow:0 14px 30px -12px rgba(22,104,201,.7)}
-.btn-azul:hover{background:var(--azul-700);transform:translateY(-3px)}
-.btn-ghost{background:rgba(255,255,255,.08);color:#fff;border-color:rgba(255,255,255,.45);backdrop-filter:blur(6px)}
-.btn-ghost:hover{background:#fff;color:var(--navy);border-color:#fff;transform:translateY(-3px)}
-.btn-outline{background:transparent;color:var(--azul-700);border-color:var(--line-cool)}
-.btn-outline:hover{border-color:var(--azul);background:#fff;transform:translateY(-3px)}
-.btn-lg{padding:18px 40px;font-size:1.05rem;min-height:60px}
-
-/* ============ BARRA DE AVISO ============ */
-.topbar{
-  background:var(--navy-900);color:rgba(255,255,255,.85);font-size:.82rem;
-  text-align:center;padding:9px 16px;letter-spacing:.02em;
-  display:flex;align-items:center;justify-content:center;gap:8px;flex-wrap:wrap;
-}
-.topbar b{color:var(--gold-soft);font-weight:600}
-.topbar .sep{opacity:.3}
+.btn:active{transform:translateY(1px)}
+.btn-zap{background:var(--zap);color:#fff}
+.btn-zap:hover{background:var(--zap-700)}
+.btn-azul{background:var(--azul);color:#fff}
+.btn-azul:hover{background:var(--azul-700)}
+.btn-line{border-color:var(--line);color:var(--ink);background:var(--card)}
+.btn-line:hover{border-color:var(--ink)}
+.btn-lg{height:58px;padding:0 32px;font-size:1.04rem}
 
 /* ============ CABEÇALHO ============ */
-header{position:fixed;top:0;left:0;right:0;z-index:1000;transition:.35s var(--ease)}
-header::before{content:"";position:absolute;inset:0;z-index:-1;pointer-events:none;
-  background:linear-gradient(180deg,rgba(7,30,55,.62) 0%,rgba(7,30,55,.28) 55%,rgba(7,30,55,0) 100%);transition:opacity .35s}
-header.scrolled::before{opacity:0}
-header .nav{display:flex;align-items:center;justify-content:space-between;height:78px;transition:.35s var(--ease)}
-.brand{display:flex;align-items:center;gap:13px}
-.brand img{height:54px;width:auto;filter:drop-shadow(0 4px 10px rgba(11,42,74,.28));transition:.35s var(--ease)}
-header.scrolled .brand img{height:48px;filter:drop-shadow(0 3px 8px rgba(11,42,74,.14))}
-.brand-txt{font-family:'Sora';font-weight:800;font-size:1.12rem;line-height:1;letter-spacing:-.02em;color:#fff;transition:color .35s;text-shadow:0 1px 10px rgba(7,30,55,.4)}
-header.scrolled .brand-txt{text-shadow:none}
-.brand-txt small{display:block;font-weight:500;font-size:.62rem;letter-spacing:.28em;opacity:.75;margin-top:4px}
-.menu{display:flex;align-items:center;gap:1px;list-style:none}
-.menu a{
-  font-family:'Plus Jakarta Sans';font-weight:500;font-size:.94rem;color:#fff;
-  padding:10px 14px;border-radius:40px;transition:.2s;position:relative;text-shadow:0 1px 8px rgba(7,30,55,.45);
+header{
+  position:sticky;top:0;z-index:1000;background:rgba(250,248,244,.9);
+  backdrop-filter:saturate(1.4) blur(14px);-webkit-backdrop-filter:saturate(1.4) blur(14px);
+  border-bottom:1px solid transparent;transition:border-color .3s,box-shadow .3s;
 }
-header.scrolled .menu a{text-shadow:none;color:var(--ink)}
-.menu a::after{content:"";position:absolute;left:12px;right:12px;bottom:6px;height:1.5px;background:var(--gold);transform:scaleX(0);transform-origin:left;transition:transform .3s var(--ease)}
-.menu a:hover{color:#fff}
-.menu a:hover::after{transform:scaleX(1)}
-.nav-cta{display:flex;align-items:center;gap:14px}
-.nav-cta .btn{padding:12px 22px;min-height:48px;font-size:.9rem}
-.burger{display:none;flex-direction:column;gap:5px;background:none;border:0;cursor:pointer;padding:9px}
-.burger span{width:26px;height:2.5px;background:#fff;border-radius:3px;transition:.3s}
-
-/* estado rolado */
-header.scrolled{background:rgba(250,247,241,.85);backdrop-filter:blur(16px);box-shadow:0 1px 0 var(--line),0 12px 30px -20px rgba(11,42,74,.4)}
-header.scrolled .nav{height:68px}
-header.scrolled .brand-txt{color:var(--navy)}
-header.scrolled .menu a{color:var(--ink)}
-header.scrolled .burger span{background:var(--navy)}
+header.scrolled{border-bottom-color:var(--line);box-shadow:0 8px 24px -18px rgba(11,42,74,.35)}
+.nav{display:flex;align-items:center;justify-content:space-between;height:76px;gap:20px}
+.brand{display:flex;align-items:center;gap:12px;flex-shrink:0}
+.brand img{height:62px;width:auto}
+.brand-sub{font-size:.7rem;font-weight:700;letter-spacing:.16em;text-transform:uppercase;color:var(--muted);line-height:1.3;padding-left:12px;border-left:1px solid var(--line)}
+.menu{display:flex;gap:4px;list-style:none}
+.menu a{font-weight:500;font-size:.96rem;color:var(--ink);padding:8px 14px;border-radius:8px;transition:background .2s}
+.menu a:hover{background:var(--bg-2)}
+.nav .btn{height:46px;padding:0 20px;font-size:.94rem}
+.burger{display:none;background:none;border:0;cursor:pointer;padding:10px;margin-right:-10px}
+.burger span{display:block;width:22px;height:2px;background:var(--ink);border-radius:2px;margin:5px 0;transition:.3s}
 
 /* ============ HERO ============ */
-.hero{position:relative;min-height:100svh;display:flex;align-items:center;padding:150px 0 90px;color:#fff;overflow:hidden}
-.hero-bg{position:absolute;inset:0;z-index:-2}
-.hero-bg img{width:100%;height:100%;object-fit:cover;transform:scale(1.05);animation:slowzoom 18s ease-out forwards}
-@keyframes slowzoom{to{transform:scale(1)}}
-.hero-bg::after{
-  content:"";position:absolute;inset:0;
-  background:
-    radial-gradient(120% 90% at 75% 30%, rgba(90,160,242,.20), transparent 55%),
-    linear-gradient(105deg, rgba(7,30,55,.94) 0%, rgba(11,42,74,.88) 42%, rgba(15,88,176,.45) 100%);
+.hero{padding:clamp(40px,6vw,72px) 0 clamp(56px,7vw,96px)}
+.hero-grid{display:grid;grid-template-columns:1.1fr .9fr;gap:clamp(40px,6vw,88px);align-items:center}
+.hero h1{font-size:clamp(2.5rem,5.2vw,4.25rem);line-height:1.04;letter-spacing:-.022em;margin-bottom:24px}
+.hero h1 em{font-style:normal;color:var(--azul)}
+.hero .sub{font-size:clamp(1.08rem,1.6vw,1.22rem);color:var(--muted);max-width:520px;margin-bottom:36px}
+.hero-btns{display:flex;flex-wrap:wrap;gap:12px}
+.hero-meta{display:flex;flex-wrap:wrap;gap:10px 28px;margin-top:40px;padding-top:28px;border-top:1px solid var(--line);font-size:.94rem;color:var(--muted)}
+.hero-meta span{display:inline-flex;align-items:center;gap:8px}
+.hero-meta svg{width:18px;height:18px;stroke:var(--azul);fill:none;stroke-width:1.8;flex-shrink:0}
+.hero-photo{position:relative;border-radius:20px;overflow:hidden;aspect-ratio:4/5;background:var(--bg-2);box-shadow:0 30px 60px -30px rgba(11,42,74,.45)}
+.hero-photo img{width:100%;height:100%;object-fit:cover;object-position:50% 60%}
+.hero-photo figcaption{
+  position:absolute;left:16px;bottom:16px;display:flex;align-items:center;gap:10px;
+  background:rgba(255,255,255,.94);backdrop-filter:blur(8px);border-radius:12px;padding:10px 14px 10px 12px;
+  font-size:.86rem;font-weight:600;color:var(--ink);box-shadow:0 10px 24px -12px rgba(11,42,74,.4)
 }
-.hero .container{position:relative;z-index:1;max-width:820px}
-.hero-rating{
-  display:inline-flex;align-items:center;gap:12px;
-  background:rgba(255,255,255,.10);border:1px solid rgba(255,255,255,.22);
-  padding:9px 9px 9px 18px;border-radius:60px;font-size:.9rem;font-weight:500;
-  margin-bottom:30px;backdrop-filter:blur(8px);
-}
-.hero-rating .gstars{color:var(--gold-soft);letter-spacing:2px;font-size:1rem}
-.hero-rating .chip{background:rgba(255,255,255,.16);padding:5px 13px;border-radius:40px;font-weight:600;font-size:.82rem}
-.hero h1{font-family:'Montserrat',sans-serif;color:#fff;font-size:clamp(2.1rem,5.4vw,4rem);font-weight:800;margin-bottom:22px;letter-spacing:-.025em;line-height:1.14;text-shadow:0 4px 30px rgba(0,0,0,.3);overflow-wrap:break-word}
-.hero h1 .accent{font-family:'Montserrat',sans-serif;font-style:normal;color:var(--gold-soft);font-weight:800;letter-spacing:-.025em}
-.hero p.sub{font-size:clamp(1.08rem,2vw,1.32rem);max-width:600px;margin-bottom:40px;color:rgba(255,255,255,.92);font-weight:400}
-.hero-btns{display:flex;flex-wrap:wrap;gap:16px;align-items:center}
-.hero-stats{display:flex;gap:14px;margin-top:54px;flex-wrap:wrap}
-.hero-stat{
-  background:rgba(255,255,255,.07);border:1px solid rgba(255,255,255,.16);
-  border-radius:var(--r-sm);padding:16px 22px;backdrop-filter:blur(6px);min-width:128px;
-}
-.hero-stat b{font-family:'Sora';font-size:1.9rem;font-weight:700;display:block;letter-spacing:-.02em}
-.hero-stat span{font-size:.82rem;color:rgba(255,255,255,.75);font-weight:500}
-.scroll-cue{position:absolute;left:50%;bottom:26px;transform:translateX(-50%);z-index:1;display:flex;flex-direction:column;align-items:center;gap:8px;color:rgba(255,255,255,.6);font-size:.7rem;letter-spacing:.2em;text-transform:uppercase}
-.scroll-cue .mouse{width:24px;height:38px;border:2px solid rgba(255,255,255,.4);border-radius:14px;position:relative}
-.scroll-cue .mouse::after{content:"";position:absolute;top:7px;left:50%;width:4px;height:7px;background:#fff;border-radius:3px;transform:translateX(-50%);animation:scrolldot 1.8s infinite}
-@keyframes scrolldot{0%{opacity:0;top:7px}40%{opacity:1}80%{opacity:0;top:18px}}
+.hero-photo figcaption small{display:block;font-weight:500;color:var(--muted);font-size:.78rem}
+.hero-photo figcaption .pin{width:34px;height:34px;border-radius:9px;background:var(--azul-50);display:grid;place-items:center}
+.hero-photo figcaption .pin svg{width:18px;height:18px;stroke:var(--azul);fill:none;stroke-width:1.9}
 
-/* onda separadora */
-.wave{display:block;width:100%;height:auto;margin-top:-1px}
-
-/* ============ DIFERENCIAIS ============ */
-.feats{padding:66px 0 26px}
-.feats-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:26px;max-width:940px;margin:0 auto}
-.feat{
-  display:flex;align-items:center;gap:22px;position:relative;overflow:hidden;
-  background:var(--card);border:1px solid var(--line);border-radius:var(--r);
-  padding:28px 32px;box-shadow:var(--shadow);transition:.35s var(--ease);
-}
-.feat::before{content:"";position:absolute;left:0;top:18px;bottom:18px;width:5px;border-radius:0 6px 6px 0;background:linear-gradient(var(--azul),var(--azure))}
-.feat.gold::before{background:linear-gradient(var(--gold),var(--gold-soft))}
-.feat:hover{transform:translateY(-7px);box-shadow:var(--shadow-lg);border-color:transparent}
-.feat .emoji{
-  flex-shrink:0;width:70px;height:70px;border-radius:20px;display:grid;place-items:center;line-height:1;
-  background:linear-gradient(145deg,rgba(22,104,201,.12),rgba(90,160,242,.20));box-shadow:inset 0 0 0 1px rgba(22,104,201,.10);
-}
-.feat .emoji svg{width:34px;height:34px;fill:none;stroke:var(--azul);stroke-width:1.7}
-.feat.gold .emoji{background:linear-gradient(145deg,rgba(216,154,54,.16),rgba(240,195,107,.26));box-shadow:inset 0 0 0 1px rgba(216,154,54,.14)}
-.feat.gold .emoji svg{stroke:var(--gold)}
-.feat h3{font-size:1.22rem;margin-bottom:5px;font-weight:700}
-.feat p{color:var(--muted);font-size:.97rem;line-height:1.55}
-
-/* ============ SEÇÕES GERAIS ============ */
-.sec{padding:clamp(60px,9vw,104px) 0}
-.sec.alt{background:var(--cream-2)}
-#racoes{padding-bottom:46px}
-#produtos{padding-top:46px}
-#produtos .sec-head{margin-bottom:40px}
-.sec.dark{background:var(--navy);color:#fff}
+/* ============ MARCAS ============ */
+.brands{border-top:1px solid var(--line);border-bottom:1px solid var(--line);background:var(--card);padding:34px 0}
+.brands-row{display:flex;align-items:center;justify-content:space-between;gap:24px 40px;flex-wrap:wrap}
+.brands-label{font-size:.78rem;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--muted);flex-shrink:0}
+.brands-list{display:flex;flex-wrap:wrap;gap:10px 34px;list-style:none;align-items:center}
+.brands-list li{font-family:var(--display);font-weight:700;font-size:1.3rem;letter-spacing:-.02em;color:var(--navy);opacity:.72}
+.brands-note{margin-top:18px;font-size:.95rem;color:var(--muted)}
+.brands-note a{color:var(--azul);font-weight:600;border-bottom:1px solid currentColor}
+.brands-note a:hover{color:var(--azul-700)}
 
 /* ============ RAÇÕES ============ */
-.racoes-wrap{display:grid;grid-template-columns:1fr 1.05fr;gap:64px;align-items:center}
-.racoes-text h2{font-size:clamp(2rem,4vw,2.8rem);margin-bottom:20px;font-weight:800}
-.racoes-text>p{color:var(--muted);margin-bottom:26px;font-size:1.08rem}
-.tick{list-style:none;margin-bottom:34px;display:grid;gap:14px}
-.tick li{display:flex;align-items:center;gap:13px;font-weight:500}
-.tick .tk{width:26px;height:26px;border-radius:8px;background:rgba(111,178,63,.14);display:grid;place-items:center;flex-shrink:0}
-.tick svg{width:15px;height:15px;stroke:var(--green);stroke-width:3;fill:none}
-.racoes-photos{display:grid;grid-template-columns:1fr 1fr;gap:20px}
-.racoes-photos .pc:nth-child(odd){margin-top:0}
-.racoes-photos .pc:nth-child(even){margin-top:36px}
-.pc{
-  background:var(--card);border:1px solid var(--line);border-radius:var(--r);
-  overflow:hidden;box-shadow:var(--shadow-sm);transition:.4s var(--ease);
-}
-.pc[data-wa]{cursor:pointer}
-.pc:hover{transform:translateY(-8px);box-shadow:var(--shadow)}
-.pc .ph{height:210px;overflow:hidden;background:var(--cream-2)}
-.pc .ph img{width:100%;height:100%;object-fit:cover;transition:transform .6s var(--ease)}
-.pc:hover .ph img{transform:scale(1.07)}
-.pc .lb{padding:16px 18px}
-.pc .lb b{font-family:'Sora';font-size:1rem;display:block;font-weight:600}
-.pc .lb span{font-size:.8rem;color:var(--muted)}
-.pc .lb .pet{display:inline-block;margin-top:8px;font-size:.7rem;font-weight:600;letter-spacing:.04em;color:var(--azul-700);background:var(--cream-2);padding:3px 10px;border-radius:30px}
-/* packshots recortados (fundo transparente): mostrar a embalagem inteira */
-.racoes-photos .pc .ph{height:230px;padding:22px;background:radial-gradient(120% 120% at 50% 0%,#fff,var(--cream-2))}
-.racoes-photos .pc .ph img{object-fit:contain;filter:drop-shadow(0 12px 22px rgba(11,42,74,.16))}
-.racoes-photos .pc:hover .ph img{transform:scale(1.05)}
-
-/* ============ SACHÊS / ÚMIDOS ============ */
-#saches{padding:62px 0}
-#saches .sec-head{margin-bottom:40px}
-.saches-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:24px;max-width:640px;margin:0 auto}
-.saches-grid .pc .ph{height:240px}
+.racoes-grid{display:grid;grid-template-columns:.95fr 1.05fr;gap:clamp(40px,6vw,80px);align-items:center}
+.racoes-text>p{color:var(--muted);font-size:1.08rem;margin:18px 0 26px}
+.racoes-text>p strong{color:var(--ink);font-weight:600}
+.tick{list-style:none;display:grid;gap:12px;margin-bottom:34px}
+.tick li{display:flex;align-items:center;gap:12px;font-weight:500}
+.tick svg{width:20px;height:20px;stroke:var(--verde);stroke-width:2.4;fill:none;flex-shrink:0}
+.prod-grid{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+.prod{background:var(--card);border:1px solid var(--line);border-radius:var(--r);overflow:hidden;cursor:pointer;transition:border-color .25s,box-shadow .25s}
+.prod:hover{border-color:#CFC7B9;box-shadow:0 18px 36px -24px rgba(11,42,74,.4)}
+.prod .ph{aspect-ratio:1/1;background:var(--bg-2);padding:24px}
+.prod .ph img{width:100%;height:100%;object-fit:contain;filter:drop-shadow(0 10px 14px rgba(11,42,74,.18));transition:transform .5s var(--ease)}
+.prod:hover .ph img{transform:translateY(-4px)}
+.prod .lb{padding:14px 16px 16px;border-top:1px solid var(--line)}
+.prod .lb b{font-family:var(--display);font-weight:700;font-size:1.08rem;letter-spacing:-.015em;display:block;line-height:1.25}
+.prod .lb span{font-size:.84rem;color:var(--muted)}
 
 /* ============ CATEGORIAS ============ */
-.cat-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:28px}
-.cat{
-  background:var(--card);border:1px solid var(--line);border-radius:var(--r);overflow:hidden;
-  box-shadow:var(--shadow-sm);display:flex;flex-direction:column;transition:.4s var(--ease);position:relative;
-}
-.cat[data-wa]{cursor:pointer}
-.cat:hover{transform:translateY(-10px);box-shadow:var(--shadow-lg);border-color:transparent}
-.cat .img{height:240px;overflow:hidden;position:relative}
-.cat .img::after{content:"";position:absolute;inset:0;background:linear-gradient(to top,rgba(11,42,74,.35),transparent 45%)}
+.cat-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+.cat{background:var(--card);border:1px solid var(--line);border-radius:var(--r);overflow:hidden;cursor:pointer;display:flex;flex-direction:column;transition:border-color .25s,box-shadow .25s}
+.cat:hover{border-color:#CFC7B9;box-shadow:0 18px 36px -24px rgba(11,42,74,.4)}
+.cat .img{aspect-ratio:4/3;overflow:hidden;background:var(--bg-2)}
 .cat .img img{width:100%;height:100%;object-fit:cover;transition:transform .7s var(--ease)}
-.cat:hover .img img{transform:scale(1.08)}
-/* cards com produto recortado (fundo transparente): mostrar embalagem inteira */
-.cat.cut .img{background:radial-gradient(120% 120% at 50% 0%,#fff,var(--cream-2));padding:26px 26px 22px}
-.cat.cut .img::after{display:none}
-.cat.cut .img img{object-fit:contain;filter:drop-shadow(0 14px 24px rgba(11,42,74,.16))}
-.cat.cut:hover .img img{transform:scale(1.05)}
-.cat .tag{
-  position:absolute;top:16px;left:16px;z-index:1;background:rgba(255,255,255,.92);color:var(--navy);
-  font-family:'Sora';font-weight:600;font-size:.74rem;letter-spacing:.03em;padding:7px 15px;border-radius:40px;
-  backdrop-filter:blur(6px);box-shadow:0 6px 16px rgba(11,42,74,.2)
-}
-.cat .body{padding:26px 26px 28px;display:flex;flex-direction:column;flex:1}
-.cat h3{font-size:1.3rem;margin-bottom:9px;font-weight:700}
-.cat p{color:var(--muted);font-size:.95rem;margin-bottom:22px;flex:1}
-.cat .more{
-  display:inline-flex;align-items:center;gap:9px;font-family:'Sora';font-weight:600;font-size:.92rem;
-  color:var(--azul-700);transition:.25s;align-self:flex-start;cursor:pointer;
-}
-.cat .more svg{width:18px;height:18px;transition:transform .3s var(--ease)}
-.cat:hover .more{color:var(--azul)}
-.cat:hover .more svg{transform:translateX(5px)}
-
-/* ============ MARCAS (marquee) ============ */
-.brands{padding:64px 0;overflow:hidden;background:var(--navy-900)}
-.brands .container{text-align:center;margin-bottom:36px}
-.brands h3{color:#fff;font-size:1.5rem;margin-bottom:8px;font-weight:700}
-.brands p{color:rgba(255,255,255,.6);font-size:.96rem}
-.marquee{display:flex;gap:18px;width:max-content;animation:scrollx 34s linear infinite}
-.marquee:hover{animation-play-state:paused}
-.marquee-wrap{position:relative;-webkit-mask-image:linear-gradient(90deg,transparent,#000 8%,#000 92%,transparent);mask-image:linear-gradient(90deg,transparent,#000 8%,#000 92%,transparent)}
-@keyframes scrollx{to{transform:translateX(-50%)}}
-.brand-chip{
-  flex-shrink:0;background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.14);
-  padding:15px 30px;border-radius:60px;font-family:'Sora';font-weight:600;font-size:1.02rem;
-  color:rgba(255,255,255,.92);white-space:nowrap;transition:.25s;
-}
-.brand-chip:hover{background:#fff;color:var(--navy);border-color:#fff}
-.brands-cta{text-align:center;max-width:660px;margin:44px auto 0}
-.brands-cta p{color:rgba(255,255,255,.85);font-size:1.08rem;margin-bottom:22px;line-height:1.6}
-.brands-cta p strong{color:#fff}
-.btn-insta{background:linear-gradient(45deg,#F58529 0%,#DD2A7B 50%,#8134AF 100%);color:#fff;box-shadow:0 14px 30px -12px rgba(221,42,123,.65)}
-.btn-insta:hover{transform:translateY(-3px);box-shadow:0 20px 40px -12px rgba(221,42,123,.8)}
-.btn-insta svg{width:21px;height:21px;fill:#fff}
-
-/* ============ CONHEÇA A LOJA ============ */
-.loja-wrap{display:grid;grid-template-columns:1.05fr 1fr;gap:64px;align-items:center}
-.loja-imgs{position:relative;padding-bottom:46px;padding-right:46px}
-.loja-imgs .big{border-radius:var(--r);overflow:hidden;box-shadow:var(--shadow-lg);height:460px}
-.loja-imgs .big img{width:100%;height:100%;object-fit:cover}
-.loja-imgs .small{
-  position:absolute;bottom:0;right:0;width:50%;height:230px;border-radius:var(--r);overflow:hidden;
-  border:7px solid var(--cream);box-shadow:var(--shadow);
-}
-.loja-imgs .small img{width:100%;height:100%;object-fit:cover}
-.loja-imgs .float-badge{
-  position:absolute;top:24px;left:-22px;background:#fff;border-radius:18px;padding:16px 20px;
-  box-shadow:var(--shadow);display:flex;align-items:center;gap:13px;
-}
-.loja-imgs .float-badge .n{font-family:'Sora';font-weight:800;font-size:1.6rem;color:var(--azul);line-height:1}
-.loja-imgs .float-badge small{font-size:.78rem;color:var(--muted);font-weight:500}
-.loja-text h2{font-size:clamp(2rem,4vw,2.8rem);margin-bottom:20px;font-weight:800}
-.loja-text p{color:var(--muted);margin-bottom:16px;font-size:1.06rem}
-.loja-feats{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin:30px 0 34px}
-.loja-feats div{display:flex;align-items:center;gap:11px;font-weight:600;font-size:.96rem}
-.loja-feats .tk{width:24px;height:24px;border-radius:7px;background:rgba(22,104,201,.1);display:grid;place-items:center;flex-shrink:0}
-.loja-feats svg{width:14px;height:14px;stroke:var(--azul);stroke-width:3;fill:none}
-
-/* ============ DEPOIMENTOS ============ */
-.rating-hero{display:flex;flex-direction:column;align-items:center;gap:8px;margin-bottom:54px}
-.rating-hero .big-num{font-family:'Sora';font-size:4rem;font-weight:800;color:var(--azul);line-height:1;letter-spacing:-.03em}
-.rating-hero .gstars{color:var(--gold);font-size:1.6rem;letter-spacing:4px}
-.rating-hero .src{color:var(--muted);font-weight:600;display:flex;align-items:center;gap:8px}
-.rating-hero .src svg{width:20px;height:20px}
-.reviews{display:grid;grid-template-columns:repeat(3,1fr);gap:26px}
-.review{
-  background:var(--card);border:1px solid var(--line);border-radius:var(--r);
-  padding:36px 32px;box-shadow:var(--shadow-sm);transition:.35s var(--ease);position:relative;
-}
-.review:hover{transform:translateY(-6px);box-shadow:var(--shadow)}
-.review .quote{font-family:'Fraunces';font-style:italic;font-size:3.4rem;line-height:1;color:var(--gold-soft);position:absolute;top:20px;right:28px;opacity:.5}
-.review .gstars{color:var(--gold);letter-spacing:2px;font-size:1.05rem;margin-bottom:16px}
-.review p{font-size:1.08rem;color:var(--ink);margin-bottom:24px;font-weight:500;position:relative;z-index:1}
-.review .who{display:flex;align-items:center;gap:13px}
-.review .av{width:46px;height:46px;border-radius:50%;display:grid;place-items:center;font-family:'Sora';font-weight:700;color:#fff;background:linear-gradient(140deg,var(--azul),var(--azure))}
-.review .who b{display:block;font-size:.96rem;font-family:'Sora';font-weight:600}
-.review .who span{font-size:.8rem;color:var(--muted);display:flex;align-items:center;gap:5px}
-.review .who span svg{width:13px;height:13px;fill:var(--azul)}
+.cat:hover .img img{transform:scale(1.04)}
+.cat .body{padding:18px 20px 20px;display:flex;align-items:center;justify-content:space-between;gap:12px}
+.cat h3{font-size:1.16rem}
+.cat .go{width:36px;height:36px;border-radius:50%;border:1px solid var(--line);display:grid;place-items:center;flex-shrink:0;color:var(--azul);transition:background .25s,color .25s,border-color .25s}
+.cat .go svg{width:16px;height:16px}
+.cat:hover .go{background:var(--zap);border-color:var(--zap);color:#fff}
+.cat-foot{text-align:center;margin-top:40px;color:var(--muted)}
+.cat-foot a{color:var(--azul);font-weight:600;border-bottom:1px solid currentColor}
 
 /* ============ CTA ============ */
-.cta{background:linear-gradient(125deg,var(--navy-900),var(--azul-700));color:#fff;text-align:center;padding:56px 0;position:relative;overflow:hidden}
-.cta::before{content:"";position:absolute;inset:0;background:radial-gradient(80% 120% at 50% -10%,rgba(90,160,242,.25),transparent 60%)}
-.cta .paw{position:absolute;font-size:9rem;opacity:.05}
-.cta .paw.a{top:-10px;left:30px}.cta .paw.b{bottom:-30px;right:40px}
-.cta .container{position:relative;z-index:1}
-.cta .eyebrow{color:var(--gold-soft);justify-content:center}
-.cta .eyebrow::before{background:var(--gold-soft)}
-.cta h2{color:#fff;font-size:clamp(2.1rem,4.6vw,3.2rem);margin-bottom:16px;font-weight:800}
-.cta p{font-size:1.18rem;color:rgba(255,255,255,.88);margin:0 auto 36px;max-width:560px}
+.cta{background:var(--navy);color:#fff;padding:clamp(56px,7vw,88px) 0}
+.cta-grid{display:flex;align-items:center;justify-content:space-between;gap:32px;flex-wrap:wrap}
+.cta h2{color:#fff;font-size:clamp(1.9rem,3.6vw,2.8rem);margin-bottom:10px}
+.cta p{color:rgba(255,255,255,.75);font-size:1.1rem;max-width:520px}
 
 /* ============ CONTATO ============ */
-.contato-wrap{display:grid;grid-template-columns:.9fr 1.1fr;gap:40px;align-items:stretch}
-.info-card{background:var(--card);border:1px solid var(--line);border-radius:var(--r);padding:14px 36px;box-shadow:var(--shadow-sm)}
-.info-row{display:flex;align-items:flex-start;gap:18px;padding:22px 0;border-bottom:1px solid var(--line)}
+.contato-grid{display:grid;grid-template-columns:.9fr 1.1fr;gap:24px;align-items:stretch}
+.info-card{background:var(--card);border:1px solid var(--line);border-radius:var(--r);padding:8px 28px}
+.info-row{display:flex;gap:16px;padding:22px 0;border-bottom:1px solid var(--line)}
 .info-row:last-child{border-bottom:0}
-.info-row .ic{width:50px;height:50px;flex-shrink:0;background:var(--cream-2);border-radius:14px;display:grid;place-items:center}
-.info-row svg{width:23px;height:23px;stroke:var(--azul);stroke-width:1.9;fill:none}
-.info-row b{font-family:'Sora';display:block;font-size:1rem;margin-bottom:3px;font-weight:600}
-.info-row span,.info-row a{color:var(--muted);font-size:.98rem}
+.info-row .ic{width:42px;height:42px;flex-shrink:0;background:var(--azul-50);border-radius:10px;display:grid;place-items:center}
+.info-row .ic svg{width:20px;height:20px;stroke:var(--azul);stroke-width:1.9;fill:none}
+.info-row b{display:block;font-weight:600;font-size:.82rem;letter-spacing:.08em;text-transform:uppercase;color:var(--muted);margin-bottom:4px}
+.info-row span,.info-row a{font-size:1rem;color:var(--ink)}
 .info-row a:hover{color:var(--azul)}
-.status{display:inline-flex;align-items:center;gap:8px;color:var(--green);font-weight:700;font-size:.92rem}
-.status .dot{width:9px;height:9px;border-radius:50%;background:var(--green);box-shadow:0 0 0 4px rgba(111,178,63,.22);animation:beat 2s infinite}
-@keyframes beat{50%{box-shadow:0 0 0 7px rgba(111,178,63,0)}}
-.map-box{border-radius:var(--r);overflow:hidden;box-shadow:var(--shadow);border:1px solid var(--line);min-height:460px}
-.map-box iframe{width:100%;height:100%;min-height:460px;border:0;display:block;filter:saturate(1.05)}
+.map-box{border-radius:var(--r);overflow:hidden;border:1px solid var(--line);min-height:420px;background:var(--bg-2)}
+.map-box iframe{width:100%;height:100%;min-height:420px;border:0;display:block}
 
 /* ============ RODAPÉ ============ */
-footer{background:var(--navy-900);color:rgba(255,255,255,.72);padding:72px 0 28px}
-.foot-grid{display:grid;grid-template-columns:1.5fr 1fr 1fr;gap:48px;margin-bottom:48px}
-.foot-brand img{height:66px;margin-bottom:18px;filter:drop-shadow(0 4px 12px rgba(0,0,0,.3))}
-.foot-brand p{font-size:.96rem;max-width:330px;line-height:1.7}
-.foot-col h4{color:#fff;font-family:'Sora';font-size:1.02rem;margin-bottom:20px;font-weight:600}
-.foot-col a,.foot-col p{display:block;color:rgba(255,255,255,.72);margin-bottom:12px;font-size:.94rem;transition:.2s}
-.foot-col a:hover{color:var(--gold-soft);transform:translateX(4px)}
-.foot-social{display:flex;gap:12px;margin-top:20px}
-.foot-social a{width:44px;height:44px;border-radius:13px;background:rgba(255,255,255,.08);display:grid;place-items:center;margin:0;transition:.25s}
-.foot-social a:hover{background:var(--azul);transform:translateY(-4px)}
-.foot-social svg{width:21px;height:21px;fill:#fff}
-.foot-bottom{border-top:1px solid rgba(255,255,255,.1);padding-top:26px;text-align:center;font-size:.86rem;color:rgba(255,255,255,.55)}
+footer{background:var(--navy-900);color:rgba(255,255,255,.7);padding:64px 0 28px;font-size:.95rem}
+.foot-grid{display:grid;grid-template-columns:1.4fr 1fr 1fr;gap:48px;margin-bottom:44px}
+.foot-brand img{height:64px;width:auto;margin-bottom:18px}
+.foot-brand p{max-width:320px}
+.foot-col h4{color:#fff;font-family:var(--display);font-weight:600;font-size:1rem;margin-bottom:16px;letter-spacing:-.01em}
+.foot-col a,.foot-col p{display:block;margin-bottom:10px;transition:color .2s}
+.foot-col a:hover{color:#fff}
+.foot-social{display:flex;gap:10px;margin-top:20px}
+.foot-social a{width:42px;height:42px;border-radius:10px;border:1px solid rgba(255,255,255,.18);display:grid;place-items:center;transition:background .2s,border-color .2s}
+.foot-social a:hover{background:rgba(255,255,255,.1);border-color:rgba(255,255,255,.4)}
+.foot-social svg{width:19px;height:19px;fill:#fff}
+.foot-bottom{border-top:1px solid rgba(255,255,255,.1);padding-top:24px;font-size:.85rem;color:rgba(255,255,255,.5);display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap}
 
 /* ============ WHATSAPP FLUTUANTE ============ */
-.wa-float{position:fixed;bottom:26px;right:26px;z-index:1500;display:flex;align-items:center;gap:0;background:#1FAE54;border-radius:60px;padding:0;box-shadow:0 14px 36px -8px rgba(31,174,84,.6);transition:.3s var(--ease);overflow:hidden}
-.wa-float .ico{width:62px;height:62px;display:grid;place-items:center;flex-shrink:0}
-.wa-float svg{width:32px;height:32px;fill:#fff}
-.wa-float .lbl{max-width:0;overflow:hidden;white-space:nowrap;font-family:'Sora';font-weight:600;color:#fff;font-size:.95rem;transition:max-width .4s var(--ease),padding .4s var(--ease)}
-.wa-float:hover{transform:translateY(-3px)}
-.wa-float:hover .lbl{max-width:170px;padding-right:24px}
-.wa-float::after{content:"";position:absolute;inset:0;border-radius:60px;animation:waring 2.6s infinite;box-shadow:0 0 0 0 rgba(31,174,84,.5)}
-@keyframes waring{70%{box-shadow:0 0 0 16px rgba(31,174,84,0)}100%{box-shadow:0 0 0 0 rgba(31,174,84,0)}}
+.wa-float{position:fixed;right:22px;bottom:22px;z-index:1500;width:58px;height:58px;border-radius:50%;background:var(--zap);display:grid;place-items:center;box-shadow:0 12px 28px -8px rgba(23,138,69,.6);transition:transform .25s var(--ease),background .2s}
+.wa-float:hover{transform:scale(1.06);background:var(--zap-700)}
+.wa-float svg{width:30px;height:30px;fill:#fff}
 
 /* ============ REVEAL ============ */
-.reveal{opacity:0;transform:translateY(34px);transition:opacity .8s var(--ease),transform .8s var(--ease)}
+.reveal{opacity:0;transform:translateY(16px);transition:opacity .7s var(--ease),transform .7s var(--ease)}
 .reveal.show{opacity:1;transform:none}
-.reveal.d1{transition-delay:.08s}.reveal.d2{transition-delay:.16s}.reveal.d3{transition-delay:.24s}
-@media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}.reveal{opacity:1;transform:none}}
+.d1{transition-delay:.07s}.d2{transition-delay:.14s}.d3{transition-delay:.21s}
+@media (prefers-reduced-motion:reduce){*{transition:none!important;animation:none!important}.reveal{opacity:1;transform:none}}
+
+:focus-visible{outline:2px solid var(--azul);outline-offset:3px;border-radius:6px}
 
 /* ============ RESPONSIVO ============ */
 @media (max-width:1000px){
-  .feats-grid{grid-template-columns:1fr 1fr}
-  .racoes-wrap,.loja-wrap,.contato-wrap{grid-template-columns:1fr;gap:44px}
-  .cat-grid,.saches-grid{grid-template-columns:1fr 1fr}
-  .reviews{grid-template-columns:1fr}
-  .foot-grid{grid-template-columns:1fr 1fr;gap:34px}
-  .loja-imgs .small{width:55%;height:200px}
+  .hero-grid,.racoes-grid,.contato-grid{grid-template-columns:1fr}
+  .hero-photo{aspect-ratio:4/3;max-height:520px}
+  .cat-grid{grid-template-columns:1fr 1fr}
+  .cat:last-child{grid-column:1/-1}
+  .cat:last-child .img{aspect-ratio:16/9}
+  .foot-grid{grid-template-columns:1fr 1fr}
+  .foot-brand{grid-column:1/-1}
 }
-@media (max-width:780px){
-  body{font-size:16px}
-  .menu,.nav-cta .btn .lbl{display:none}
-  .burger{display:flex}
-  .menu.open{display:flex;flex-direction:column;position:absolute;top:100%;left:14px;right:14px;background:#fff;border:1px solid var(--line);border-radius:18px;padding:14px;box-shadow:var(--shadow);gap:2px}
-  .menu.open a{color:var(--ink)!important;padding:13px 14px;border-radius:11px;width:100%}
-  .menu.open a::after{display:none}
-  .sec{padding:64px 0}
-  #racoes{padding-bottom:34px}#produtos{padding-top:34px}
-  .feats{padding:48px 0 6px}
-  .hero{padding:124px 0 76px}
-  .sec-head{margin-bottom:34px}
-  .racoes-photos .pc:nth-child(even){margin-top:0}
+@media (max-width:820px){
+  .menu{display:none}
+  .burger{display:block}
+  .nav .btn .lbl{display:none}
+  .nav .btn{width:46px;padding:0}
+  .menu.open{display:flex;flex-direction:column;position:absolute;top:100%;left:0;right:0;background:var(--bg);border-bottom:1px solid var(--line);padding:8px clamp(16px,4vw,32px) 16px;box-shadow:0 20px 30px -20px rgba(11,42,74,.3)}
+  .menu.open a{display:block;padding:14px 4px;border-radius:0;border-bottom:1px solid var(--line);font-size:1.05rem}
+  .menu.open li:last-child a{border-bottom:0}
+  .nav-right{display:flex;align-items:center;gap:6px}
 }
 @media (max-width:560px){
-  .cat-grid,.feats-grid{grid-template-columns:1fr}
-  .foot-grid{grid-template-columns:1fr;text-align:center}
-  .foot-brand p{margin:0 auto}.foot-social{justify-content:center}
-  .hero{padding:112px 0 64px}
-  .hero h1{font-size:2.15rem;line-height:1.16}
-  .hero p.sub{font-size:1.04rem;line-height:1.62}
-  .hero-btns{flex-direction:column;align-items:stretch}
-  .eyebrow{font-size:.7rem}
-  .sec-head h2,.racoes-text h2,.cta h2,.brands h3{font-size:1.7rem;line-height:1.2}
-  .racoes-text>p{font-size:1rem}
-  .racoes-photos{gap:14px}
-  .racoes-photos .pc .ph{height:190px;padding:16px}
-  .pc .ph{height:170px}
-  .cat .img{height:210px}
-  .cat.cut .img{height:200px;padding:20px}
-  .brand-txt small{letter-spacing:.16em}
-  .brands{padding:48px 0}
-  .brand-chip{padding:12px 22px;font-size:.94rem}
-  .cta{padding:44px 0}
-  .info-card{padding:6px 22px}
-  .info-row{padding:18px 0;gap:14px}
-  .info-row .ic{width:44px;height:44px}
+  body{font-size:16px}
+  .nav{height:66px}
+  .brand img{height:48px}
+  .brand-sub{display:none}
+  .hero{padding-top:28px}
+  .hero h1{font-size:2.35rem}
+  .hero-btns .btn{flex:1 1 100%}
+  .hero-meta{flex-direction:column;margin-top:32px;padding-top:22px}
+  .hero-photo{aspect-ratio:4/5}
+  .brands-list{gap:6px 22px}
+  .brands-list li{font-size:1.12rem}
+  .sec-head{margin-bottom:32px}
+  .prod-grid{gap:12px}
+  .prod .ph{padding:16px}
+  .prod .lb{padding:12px}
+  .prod .lb b{font-size:1rem}
+  .cat-grid{gap:12px}
+  .cat:not(:last-child) .img{aspect-ratio:1/1}
+  .cat .body{padding:12px 12px 14px}
+  .cat h3{font-size:.98rem}
+  .cat .go{display:none}
+  .cta-grid .btn{width:100%}
+  .info-card{padding:4px 20px}
   .map-box,.map-box iframe{min-height:320px}
-  .wa-float{bottom:18px;right:16px}
-  .wa-float .ico{width:56px;height:56px}
-}
-@media (max-width:420px){
-  .hero h1{font-size:1.82rem}
-  .hero p.sub{font-size:.99rem}
-  .brand-txt{font-size:1rem}
-  .brand-txt small{display:none}
-  .brand img{height:44px}
-  .nav-cta .btn{padding:11px 15px;min-height:44px}
-  .sec-head p{font-size:1rem}
-  .foot-brand img{height:56px}
+  .foot-grid{grid-template-columns:1fr;gap:32px}
+  .wa-float{right:16px;bottom:16px;width:54px;height:54px}
 }
 </style>
 </head>
 <body>
 
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <symbol id="i-wa" viewBox="0 0 24 24"><path d="M.057 24l1.687-6.163a11.867 11.867 0 01-1.587-5.946C.16 5.335 5.495 0 12.05 0a11.82 11.82 0 018.413 3.488 11.82 11.82 0 013.48 8.414c-.003 6.557-5.338 11.892-11.893 11.892a11.9 11.9 0 01-5.688-1.448L.057 24zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.247-.694.247-1.289.173-1.413z"/></symbol>
+  <symbol id="i-ig" viewBox="0 0 24 24"><path d="M12 2.2c3.2 0 3.6 0 4.9.07 1.2.05 1.8.25 2.2.42.6.2 1 .5 1.4.9.4.4.7.8.9 1.4.17.4.37 1 .42 2.2.06 1.3.07 1.7.07 4.9s0 3.6-.07 4.9c-.05 1.2-.25 1.8-.42 2.2-.2.6-.5 1-.9 1.4-.4.4-.8.7-1.4.9-.4.17-1 .37-2.2.42-1.3.06-1.7.07-4.9.07s-3.6 0-4.9-.07c-1.2-.05-1.8-.25-2.2-.42-.6-.2-1-.5-1.4-.9-.4-.4-.7-.8-.9-1.4-.17-.4-.37-1-.42-2.2C2.21 15.6 2.2 15.2 2.2 12s0-3.6.07-4.9c.05-1.2.25-1.8.42-2.2.2-.6.5-1 .9-1.4.4-.4.8-.7 1.4-.9.4-.17 1-.37 2.2-.42C8.4 2.21 8.8 2.2 12 2.2zm0 4.86A4.94 4.94 0 1012 17a4.94 4.94 0 000-9.94zm0 8.14A3.2 3.2 0 1112 8.8a3.2 3.2 0 010 6.4zm6.3-8.35a1.15 1.15 0 11-2.3 0 1.15 1.15 0 012.3 0z"/></symbol>
+  <symbol id="i-seta" viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+</svg>
+
 <!-- ============ CABEÇALHO ============ -->
 <header id="header">
   <div class="container nav">
-    <a href="#topo" class="brand" aria-label="Pet Rações - início">
-      <img src="assets/logo.png" alt="Logo Pet Rações - osso azul" width="54" height="54">
-      <span class="brand-txt">Pet Rações<small>ATACADO &amp; VAREJO</small></span>
+    <a href="#topo" class="brand" aria-label="Pet Rações — início">
+      <img src="assets/logo-osso.png" alt="Pet Rações" width="240" height="125">
+      <span class="brand-sub">Atacado<br>e Varejo</span>
     </a>
     <nav>
       <ul class="menu" id="menu">
         <li><a href="#racoes">Rações</a></li>
-        <li><a href="#petiscos">Petiscos</a></li>
-        <li><a href="#acessorios">Acessórios</a></li>
+        <li><a href="#produtos">Produtos</a></li>
         <li><a href="#contato">Contato</a></li>
       </ul>
     </nav>
-    <div class="nav-cta">
-      <a href="#" class="btn btn-zap" data-wa>
-        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M.057 24l1.687-6.163a11.867 11.867 0 01-1.587-5.946C.16 5.335 5.495 0 12.05 0a11.82 11.82 0 018.413 3.488 11.82 11.82 0 013.48 8.414c-.003 6.557-5.338 11.892-11.893 11.892a11.9 11.9 0 01-5.688-1.448L.057 24zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981z"/></svg>
-        <span class="lbl">Pedir no WhatsApp</span>
+    <div class="nav-right">
+      <a href="#" class="btn btn-zap" data-wa aria-label="Pedir no WhatsApp">
+        <svg class="ico"><use href="#i-wa"/></svg><span class="lbl">Pedir no WhatsApp</span>
       </a>
+      <button class="burger" id="burger" aria-label="Abrir menu" aria-expanded="false"><span></span><span></span><span></span></button>
     </div>
-    <button class="burger" id="burger" aria-label="Abrir menu"><span></span><span></span><span></span></button>
   </div>
 </header>
 
+<main>
 <!-- ============ HERO ============ -->
 <section class="hero" id="topo">
-  <div class="hero-bg">
-    <img src="assets/loja-corredor.jpeg" alt="Interior da loja Pet Rações com corredores e prateleiras cheias de produtos" fetchpriority="high">
-  </div>
-  <div class="container">
-    <h1 class="reveal">Tudo para o seu pet,<br>com preço de <span class="accent">atacado e varejo</span></h1>
-    <p class="sub reveal d2">Tudo o que o seu cão e o seu gato precisam em um só lugar: ração, petiscos, remédios, acessórios e higiene.</p>
-    <div class="hero-btns reveal d3">
-      <a href="#" class="btn btn-zap btn-lg" data-wa>
-        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M.057 24l1.687-6.163a11.867 11.867 0 01-1.587-5.946C.16 5.335 5.495 0 12.05 0a11.82 11.82 0 018.413 3.488 11.82 11.82 0 013.48 8.414c-.003 6.557-5.338 11.892-11.893 11.892a11.9 11.9 0 01-5.688-1.448L.057 24zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981z"/></svg>
-        Falar no WhatsApp
-      </a>
-      <a href="#racoes" class="btn btn-ghost btn-lg">Ver produtos</a>
+  <div class="container hero-grid">
+    <div>
+      <span class="eyebrow reveal">Pet shop em Goiânia</span>
+      <h1 class="reveal d1">Tudo para o seu pet, com preço de <em>atacado e varejo</em></h1>
+      <p class="sub reveal d2">Tudo o que o seu cão e o seu gato precisam em um só lugar: ração, petiscos, remédios, acessórios e higiene.</p>
+      <div class="hero-btns reveal d3">
+        <a href="#" class="btn btn-zap btn-lg" data-wa><svg class="ico"><use href="#i-wa"/></svg>Falar no WhatsApp</a>
+        <a href="#produtos" class="btn btn-line btn-lg">Ver produtos</a>
+      </div>
+      <div class="hero-meta reveal d3">
+        <span><svg viewBox="0 0 24 24"><path d="M12 21s-7-6.2-7-11a7 7 0 1114 0c0 4.8-7 11-7 11z"/><circle cx="12" cy="10" r="2.5"/></svg>Av. Padre Wendel, 1078 — São José</span>
+        <span><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>Atendimento até as 19h</span>
+      </div>
     </div>
+    <figure class="hero-photo reveal d2">
+      <img src="assets/loja-corredor.jpeg" alt="Interior da loja Pet Rações, com prateleiras de rações, sachês, petiscos e parede de coleiras" width="750" height="1000" fetchpriority="high">
+      <figcaption><span class="pin"><svg viewBox="0 0 24 24"><path d="M12 21s-7-6.2-7-11a7 7 0 1114 0c0 4.8-7 11-7 11z"/><circle cx="12" cy="10" r="2.5"/></svg></span><span>Nossa loja<small>São José, Goiânia</small></span></figcaption>
+    </figure>
   </div>
 </section>
 
-<!-- ============ MARCAS (logo após o hero) ============ -->
-<section class="brands dark">
+<!-- ============ MARCAS ============ -->
+<section class="brands" aria-label="Marcas">
   <div class="container">
-    <h3>Trabalhamos com as melhores marcas do mercado</h3>
-  </div>
-  <div class="marquee-wrap">
-    <div class="marquee" id="marquee">
-      <span class="brand-chip">SerPet</span><span class="brand-chip">PerGatti</span><span class="brand-chip">Fórmula Natural</span><span class="brand-chip">Pedigree</span><span class="brand-chip">Whiskas</span><span class="brand-chip">Trustydog</span><span class="brand-chip">Caozitos</span>
+    <div class="brands-row">
+      <span class="brands-label">Marcas na loja</span>
+      <ul class="brands-list">
+        <li>SerPet</li><li>PerGatti</li><li>Fórmula Natural</li><li>Pedigree</li><li>Whiskas</li><li>Trustydog</li><li>Caozitos</li>
+      </ul>
     </div>
-  </div>
-  <div class="container">
-    <div class="brands-cta reveal">
-      <p>Ainda não conhece algumas dessas marcas? No nosso <strong>Instagram</strong> mostramos os benefícios de cada ração pro seu pet.</p>
-      <a href="https://www.instagram.com/petracoes.atacado/" target="_blank" rel="noopener" class="btn btn-insta">
-        <svg viewBox="0 0 24 24"><path d="M12 2.2c3.2 0 3.6 0 4.9.07 1.2.05 1.8.25 2.2.42.6.2 1 .5 1.4.9.4.4.7.8.9 1.4.17.4.37 1 .42 2.2.06 1.3.07 1.7.07 4.9s0 3.6-.07 4.9c-.05 1.2-.25 1.8-.42 2.2-.2.6-.5 1-.9 1.4-.4.4-.8.7-1.4.9-.4.17-1 .37-2.2.42-1.3.06-1.7.07-4.9.07s-3.6 0-4.9-.07c-1.2-.05-1.8-.25-2.2-.42-.6-.2-1-.5-1.4-.9-.4-.4-.7-.8-.9-1.4-.17-.4-.37-1-.42-2.2C2.21 15.6 2.2 15.2 2.2 12s0-3.6.07-4.9c.05-1.2.25-1.8.42-2.2.2-.6.5-1 .9-1.4.4-.4.8-.7 1.4-.9.4-.17 1-.37 2.2-.42C8.4 2.21 8.8 2.2 12 2.2zm0 4.86A4.94 4.94 0 1012 17a4.94 4.94 0 000-9.94zm0 8.14A3.2 3.2 0 1112 8.8a3.2 3.2 0 010 6.4zm6.3-8.35a1.15 1.15 0 11-2.3 0 1.15 1.15 0 012.3 0z"/></svg>
-        Ver no Instagram
-      </a>
-    </div>
+    <p class="brands-note">Não conhece alguma dessas marcas? No <a href="https://www.instagram.com/petracoes.atacado/" target="_blank" rel="noopener">nosso Instagram</a> mostramos os benefícios de cada ração para o seu pet.</p>
   </div>
 </section>
 
 <!-- ============ RAÇÕES ============ -->
 <section class="sec" id="racoes">
-  <div class="container">
-    <div class="racoes-wrap">
-      <div class="racoes-text reveal">
-        <span class="eyebrow">Rações · cães e gatos</span>
-        <h2>A ração certa para cada fase do seu melhor amigo</h2>
-        <p>Trabalhamos com rações <strong>premium</strong> e <strong>super premium</strong> para filhotes, adultos e idosos — de raças pequenas a grandes. Tem para cachorro e para gato, sempre com preço justo de atacado e varejo.</p>
-        <ul class="tick">
-          <li><span class="tk"><svg viewBox="0 0 24 24"><path d="M20 6L9 17l-5-5"/></svg></span> Filhotes, adultos e sênior</li>
-          <li><span class="tk"><svg viewBox="0 0 24 24"><path d="M20 6L9 17l-5-5"/></svg></span> Raças pequenas, médias e grandes</li>
-          <li><span class="tk"><svg viewBox="0 0 24 24"><path d="M20 6L9 17l-5-5"/></svg></span> Sacos de vários tamanhos, com preço de atacado</li>
-        </ul>
-        <a href="#" class="btn btn-azul" data-wa="Olá! Quero saber sobre as rações disponíveis.">Ver rações no WhatsApp</a>
+  <div class="container racoes-grid">
+    <div class="racoes-text reveal">
+      <span class="eyebrow">Rações para cães e gatos</span>
+      <h2 class="h2">A ração certa para cada fase do seu melhor amigo</h2>
+      <p>Trabalhamos com rações <strong>premium</strong> e <strong>super premium</strong> para filhotes, adultos e idosos, de raças pequenas a grandes. Tem para cachorro e para gato, sempre com preço justo de atacado e varejo.</p>
+      <ul class="tick">
+        <li><svg viewBox="0 0 24 24"><path d="M20 6L9 17l-5-5"/></svg>Filhotes, adultos e sênior</li>
+        <li><svg viewBox="0 0 24 24"><path d="M20 6L9 17l-5-5"/></svg>Raças pequenas, médias e grandes</li>
+        <li><svg viewBox="0 0 24 24"><path d="M20 6L9 17l-5-5"/></svg>Sacos de vários tamanhos, com preço de atacado</li>
+      </ul>
+      <a href="#" class="btn btn-azul" data-wa="Olá! Quero saber sobre as rações disponíveis.">Consultar rações no WhatsApp</a>
+    </div>
+    <div class="prod-grid">
+      <div class="prod reveal" role="button" tabindex="0" data-wa="Olá! Vi a ração Fórmula Natural (Super Premium) na landing page e gostaria de mais informações.">
+        <div class="ph"><img loading="lazy" decoding="async" src="assets/racao-formula-natural.png" alt="Ração Fórmula Natural Life Super Premium para cães"></div>
+        <div class="lb"><b>Fórmula Natural</b><span>Super Premium · Cães</span></div>
       </div>
-      <div class="racoes-photos">
-        <div class="pc reveal" role="button" tabindex="0" data-wa="Olá! Vi a ração Fórmula Natural (Super Premium) na landing page e gostaria de mais informações."><div class="ph"><img loading="lazy" decoding="async" src="assets/racao-formula-natural.png" alt="Ração Fórmula Natural Life Super Premium para cães"></div><div class="lb"><b>Fórmula Natural</b><span>Super Premium</span><br><span class="pet">Cães</span></div></div>
-        <div class="pc reveal d1" role="button" tabindex="0" data-wa="Olá! Vi a ração SerPet Sênior (Super Premium) na landing page e gostaria de mais informações."><div class="ph"><img loading="lazy" decoding="async" src="assets/racao-serpet.png" alt="Ração SerPet Super Premium Sênior para cães"></div><div class="lb"><b>SerPet Sênior</b><span>Super Premium</span><br><span class="pet">Cães</span></div></div>
-        <div class="pc reveal d1" role="button" tabindex="0" data-wa="Olá! Vi a ração PerGatti (Super Premium, para gatos) na landing page e gostaria de mais informações."><div class="ph"><img loading="lazy" decoding="async" src="assets/racao-pergatti.png" alt="Ração PerGatti Super Premium para gatos sabor salmão"></div><div class="lb"><b>PerGatti</b><span>Super Premium</span><br><span class="pet">Gatos</span></div></div>
-        <div class="pc reveal d2" role="button" tabindex="0" data-wa="Olá! Vi a ração Trustydog (Premium Especial) na landing page e gostaria de mais informações."><div class="ph"><img loading="lazy" decoding="async" src="assets/racao-trustydog.png" alt="Rações Trustydog Premium Especial para cães"></div><div class="lb"><b>Trustydog</b><span>Premium Especial</span><br><span class="pet">Cães</span></div></div>
+      <div class="prod reveal d1" role="button" tabindex="0" data-wa="Olá! Vi a ração SerPet Sênior (Super Premium) na landing page e gostaria de mais informações.">
+        <div class="ph"><img loading="lazy" decoding="async" src="assets/racao-serpet.png" alt="Ração SerPet Super Premium Sênior para cães"></div>
+        <div class="lb"><b>SerPet Sênior</b><span>Super Premium · Cães</span></div>
+      </div>
+      <div class="prod reveal d1" role="button" tabindex="0" data-wa="Olá! Vi a ração PerGatti (Super Premium, para gatos) na landing page e gostaria de mais informações.">
+        <div class="ph"><img loading="lazy" decoding="async" src="assets/racao-pergatti.png" alt="Ração PerGatti Super Premium para gatos sabor salmão"></div>
+        <div class="lb"><b>PerGatti</b><span>Super Premium · Gatos</span></div>
+      </div>
+      <div class="prod reveal d2" role="button" tabindex="0" data-wa="Olá! Vi a ração Trustydog (Premium Especial) na landing page e gostaria de mais informações.">
+        <div class="ph"><img loading="lazy" decoding="async" src="assets/racao-trustydog.png" alt="Rações Trustydog Premium Especial para cães"></div>
+        <div class="lb"><b>Trustydog</b><span>Premium Especial · Cães</span></div>
       </div>
     </div>
   </div>
 </section>
 
 <!-- ============ CATEGORIAS ============ -->
-<section class="sec" id="produtos">
+<section class="sec" id="produtos" style="padding-top:0">
   <div class="container">
     <div class="sec-head">
+      <span class="eyebrow">Direto das nossas prateleiras</span>
       <h2>Tem de tudo para o seu melhor amigo</h2>
-      <p>Estes são só <strong>alguns exemplos</strong>. Na loja tem muito mais opções, é só chamar no WhatsApp.</p>
+      <p>Estes são só alguns exemplos. Na loja tem muito mais opções, é só chamar no WhatsApp.</p>
     </div>
     <div class="cat-grid">
-
-      <div class="cat cut reveal" id="petiscos" role="button" tabindex="0" data-wa="Olá! Vi os petiscos na landing page e gostaria de mais informações.">
-        <div class="img"><span class="tag">Petiscos</span><img loading="lazy" decoding="async" src="assets/petiscos.png" alt="Petisco Caozitos sabor carne para cães"></div>
-        <div class="body"><h3>Petiscos saborosos</h3><span class="more">Ver no WhatsApp <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span></div>
+      <div class="cat reveal" id="petiscos" role="button" tabindex="0" data-wa="Olá! Vi os petiscos na landing page e gostaria de mais informações.">
+        <div class="img"><img loading="lazy" decoding="async" src="assets/petisco-caolitos.jpeg" alt="Petiscos Caozitos sabor frango na prateleira da loja" width="750" height="1000" style="object-position:50% 45%"></div>
+        <div class="body"><h3>Petiscos</h3><span class="go" aria-hidden="true"><svg><use href="#i-seta"/></svg></span></div>
       </div>
-
-      <div class="cat cut reveal d1" role="button" tabindex="0" data-wa="Olá! Vi o sachê para gatos na landing page e gostaria de mais informações.">
-        <div class="img"><span class="tag">Sachê · Gatos</span><img loading="lazy" decoding="async" src="assets/sache-gato.png" alt="Sachê Whiskas sabor carne ao molho para gatos adultos"></div>
-        <div class="body"><h3>Sachê para gatos</h3><span class="more">Ver no WhatsApp <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span></div>
+      <div class="cat reveal d1" role="button" tabindex="0" data-wa="Olá! Vi o sachê para gatos na landing page e gostaria de mais informações.">
+        <div class="img"><img loading="lazy" decoding="async" src="assets/sache-whiskas.jpeg" alt="Sachê Whiskas sabor carne ao molho para gatos adultos" width="750" height="1000" style="object-position:50% 45%"></div>
+        <div class="body"><h3>Sachê para gatos</h3><span class="go" aria-hidden="true"><svg><use href="#i-seta"/></svg></span></div>
       </div>
-
-      <div class="cat cut reveal d2" role="button" tabindex="0" data-wa="Olá! Vi o sachê para cães na landing page e gostaria de mais informações.">
-        <div class="img"><span class="tag">Sachê · Cães</span><img loading="lazy" decoding="async" src="assets/sache-cachorro.png" alt="Sachê Pedigree sabor frango para cães adultos de raças pequenas"></div>
-        <div class="body"><h3>Sachê para cães</h3><span class="more">Ver no WhatsApp <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span></div>
+      <div class="cat reveal d2" role="button" tabindex="0" data-wa="Olá! Vi o sachê para cães na landing page e gostaria de mais informações.">
+        <div class="img"><img loading="lazy" decoding="async" src="assets/sache-pedigree.jpeg" alt="Sachê Pedigree para cães adultos" width="750" height="1000" style="object-position:50% 45%"></div>
+        <div class="body"><h3>Sachê para cães</h3><span class="go" aria-hidden="true"><svg><use href="#i-seta"/></svg></span></div>
       </div>
-
-      <div class="cat cut reveal" role="button" tabindex="0" data-wa="Olá! Vi a areia higiênica na landing page e gostaria de mais informações.">
-        <div class="img"><span class="tag">Areia · Gatos</span><img loading="lazy" decoding="async" src="assets/areia-higienica.png" alt="Areia e granulado higiênico para gatos: FreeCat, Golden e outras marcas"></div>
-        <div class="body"><h3>Areia higiênica</h3><span class="more">Ver no WhatsApp <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span></div>
+      <div class="cat reveal" role="button" tabindex="0" data-wa="Olá! Vi a areia higiênica na landing page e gostaria de mais informações.">
+        <div class="img"><img loading="lazy" decoding="async" src="assets/areia-higienica.jpeg" alt="Areia e granulado higiênico para gatos na prateleira" width="750" height="1000" style="object-position:50% 60%"></div>
+        <div class="body"><h3>Areia higiênica</h3><span class="go" aria-hidden="true"><svg><use href="#i-seta"/></svg></span></div>
       </div>
-
       <div class="cat reveal d1" id="medicamentos" role="button" tabindex="0" data-wa="Olá! Vi os medicamentos e vitaminas na landing page e gostaria de mais informações.">
-        <div class="img"><span class="tag">Farmácia Pet</span><img loading="lazy" decoding="async" src="assets/medicamentos.jpeg" alt="Prateleira de medicamentos pet: vitaminas, antiparasitário, antibiótico e anti-inflamatório"></div>
-        <div class="body"><h3>Medicamentos e vitaminas</h3><span class="more">Ver no WhatsApp <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span></div>
+        <div class="img"><img loading="lazy" decoding="async" src="assets/medicamentos.jpeg" alt="Prateleira de medicamentos pet: vitaminas, antiparasitário, antibiótico e anti-inflamatório" width="750" height="1000" style="object-position:50% 50%"></div>
+        <div class="body"><h3>Medicamentos e vitaminas</h3><span class="go" aria-hidden="true"><svg><use href="#i-seta"/></svg></span></div>
       </div>
-
-      <div class="cat cut reveal d2" role="button" tabindex="0" data-wa="Olá! Vi os antipulgas e carrapatos na landing page e gostaria de mais informações.">
-        <div class="img"><span class="tag">Antipulgas</span><img loading="lazy" decoding="async" src="assets/antipulgas.png" alt="Coleira antiparasitária FrontMax contra pulgas e carrapatos"></div>
-        <div class="body"><h3>Antipulgas e carrapatos</h3><span class="more">Ver no WhatsApp <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span></div>
+      <div class="cat reveal d2" role="button" tabindex="0" data-wa="Olá! Vi os antipulgas e carrapatos na landing page e gostaria de mais informações.">
+        <div class="img"><img loading="lazy" decoding="async" src="assets/frontmax.jpeg" alt="Coleiras antiparasitárias FrontMax contra pulgas e carrapatos" width="750" height="1000" style="object-position:50% 65%"></div>
+        <div class="body"><h3>Antipulgas e carrapatos</h3><span class="go" aria-hidden="true"><svg><use href="#i-seta"/></svg></span></div>
       </div>
-
       <div class="cat reveal" id="acessorios" role="button" tabindex="0" data-wa="Olá! Vi as coleiras, guias e caminhas na landing page e gostaria de mais informações.">
-        <div class="img"><span class="tag">Acessórios</span><img loading="lazy" decoding="async" src="assets/acessorios-coleiras.jpeg" alt="Parede com coleiras, guias, peitorais e caminhas para pets"></div>
-        <div class="body"><h3>Coleiras, guias e caminhas</h3><span class="more">Ver no WhatsApp <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span></div>
+        <div class="img"><img loading="lazy" decoding="async" src="assets/acessorios-coleiras.jpeg" alt="Parede com coleiras, guias, peitorais e caminhas para pets" width="750" height="1000" style="object-position:50% 50%"></div>
+        <div class="body"><h3>Coleiras, guias e caminhas</h3><span class="go" aria-hidden="true"><svg><use href="#i-seta"/></svg></span></div>
       </div>
-
       <div class="cat reveal d1" role="button" tabindex="0" data-wa="Olá! Vi os comedouros e bebedouros na landing page e gostaria de mais informações.">
-        <div class="img"><span class="tag">Utilidades</span><img loading="lazy" decoding="async" src="assets/acessorios-comedouros.jpeg" alt="Comedouros, bebedouros automáticos e colares elizabetanos"></div>
-        <div class="body"><h3>Comedouros e bebedouros</h3><span class="more">Ver no WhatsApp <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span></div>
+        <div class="img"><img loading="lazy" decoding="async" src="assets/acessorios-comedouros.jpeg" alt="Comedouros, bebedouros automáticos e colares elizabetanos" width="750" height="1000" style="object-position:50% 50%"></div>
+        <div class="body"><h3>Comedouros e bebedouros</h3><span class="go" aria-hidden="true"><svg><use href="#i-seta"/></svg></span></div>
       </div>
-
       <div class="cat reveal d2" id="higiene" role="button" tabindex="0" data-wa="Olá! Vi os produtos de higiene e limpeza na landing page e gostaria de mais informações.">
-        <div class="img"><span class="tag">Higiene</span><img loading="lazy" decoding="async" src="assets/higiene.jpeg" alt="Eliminadores de odores e produtos de higiene e limpeza para pets"></div>
-        <div class="body"><h3>Higiene e limpeza</h3><span class="more">Ver no WhatsApp <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span></div>
+        <div class="img"><img loading="lazy" decoding="async" src="assets/higiene.jpeg" alt="Eliminadores de odores e produtos de higiene e limpeza para pets" width="750" height="1000" style="object-position:50% 50%"></div>
+        <div class="body"><h3>Higiene e limpeza</h3><span class="go" aria-hidden="true"><svg><use href="#i-seta"/></svg></span></div>
       </div>
-
     </div>
   </div>
 </section>
 
 <!-- ============ CTA ============ -->
 <section class="cta">
-  <div class="container">
-    <h2>Faça seu pedido agora</h2>
-    <p>Atendimento rápido e tudo para o seu pet num só lugar. É só chamar no WhatsApp.</p>
-    <a href="#" class="btn btn-zap btn-lg" data-wa>
-      <svg viewBox="0 0 24 24" fill="currentColor"><path d="M.057 24l1.687-6.163a11.867 11.867 0 01-1.587-5.946C.16 5.335 5.495 0 12.05 0a11.82 11.82 0 018.413 3.488 11.82 11.82 0 013.48 8.414c-.003 6.557-5.338 11.892-11.893 11.892a11.9 11.9 0 01-5.688-1.448L.057 24zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981z"/></svg>
-      Falar no WhatsApp
-    </a>
+  <div class="container cta-grid">
+    <div>
+      <h2>Faça seu pedido agora</h2>
+      <p>Atendimento rápido e tudo para o seu pet num só lugar. É só chamar no WhatsApp.</p>
+    </div>
+    <a href="#" class="btn btn-zap btn-lg" data-wa><svg class="ico"><use href="#i-wa"/></svg>Falar no WhatsApp</a>
   </div>
 </section>
 
@@ -626,11 +438,11 @@ footer{background:var(--navy-900);color:rgba(255,255,255,.72);padding:72px 0 28p
 <section class="sec" id="contato">
   <div class="container">
     <div class="sec-head">
-      <span class="eyebrow center">Contato e localização</span>
+      <span class="eyebrow">Contato e localização</span>
       <h2>Venha nos visitar ou peça pelo WhatsApp</h2>
-      <p>Estamos de portas abertas em Goiânia, prontos para atender você e seu pet.</p>
+      <p>Estamos de portas abertas em Goiânia, prontos para atender você e o seu pet.</p>
     </div>
-    <div class="contato-wrap">
+    <div class="contato-grid">
       <div class="info-card reveal">
         <div class="info-row">
           <div class="ic"><svg viewBox="0 0 24 24"><path d="M12 21s-7-6.2-7-11a7 7 0 1114 0c0 4.8-7 11-7 11z"/><circle cx="12" cy="10" r="2.5"/></svg></div>
@@ -638,11 +450,11 @@ footer{background:var(--navy-900);color:rgba(255,255,255,.72);padding:72px 0 28p
         </div>
         <div class="info-row">
           <div class="ic"><svg viewBox="0 0 24 24"><path d="M22 16.9v3a2 2 0 01-2.2 2 19.8 19.8 0 01-8.6-3.1 19.5 19.5 0 01-6-6 19.8 19.8 0 01-3.1-8.7A2 2 0 014.1 2h3a2 2 0 012 1.7c.1.9.4 1.8.7 2.7a2 2 0 01-.5 2.1L8.1 9.8a16 16 0 006 6l1.3-1.3a2 2 0 012.1-.4c.9.3 1.8.6 2.7.7a2 2 0 011.7 2z"/></svg></div>
-          <div><b>Telefone</b><a href="tel:+556239011359">(62) 3901-1359</a></div>
+          <div><b>Telefone e WhatsApp</b><a href="tel:+556239011359">(62) 3901-1359</a></div>
         </div>
         <div class="info-row">
           <div class="ic"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg></div>
-          <div><b>Horário</b><span class="status"><span class="dot"></span> Aberto agora · fecha às 19:00</span></div>
+          <div><b>Horário</b><span>Atendimento até as 19h</span></div>
         </div>
         <div class="info-row">
           <div class="ic"><svg viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1.1" fill="var(--azul)" stroke="none"/></svg></div>
@@ -655,26 +467,23 @@ footer{background:var(--navy-900);color:rgba(255,255,255,.72);padding:72px 0 28p
     </div>
   </div>
 </section>
+</main>
 
 <!-- ============ RODAPÉ ============ -->
 <footer>
   <div class="container">
     <div class="foot-grid">
       <div class="foot-brand">
-        <img loading="lazy" decoding="async" src="assets/logo.png" alt="Logo Pet Rações">
-        <p>Pet Rações — Atacado e Varejo. Tudo para o seu pet, com qualidade, variedade e o melhor preço, aqui em Goiânia/GO.</p>
+        <img loading="lazy" decoding="async" src="assets/logo-osso.png" alt="Pet Rações" width="240" height="125">
+        <p>Pet Rações — Atacado e Varejo. Tudo para o seu pet, com qualidade, variedade e o melhor preço, aqui em Goiânia.</p>
         <div class="foot-social">
-          <a href="https://www.instagram.com/petracoes.atacado/" target="_blank" rel="noopener" aria-label="Instagram">
-            <svg viewBox="0 0 24 24"><path d="M12 2.2c3.2 0 3.6 0 4.9.07 1.2.05 1.8.25 2.2.42.6.2 1 .5 1.4.9.4.4.7.8.9 1.4.17.4.37 1 .42 2.2.06 1.3.07 1.7.07 4.9s0 3.6-.07 4.9c-.05 1.2-.25 1.8-.42 2.2-.2.6-.5 1-.9 1.4-.4.4-.8.7-1.4.9-.4.17-1 .37-2.2.42-1.3.06-1.7.07-4.9.07s-3.6 0-4.9-.07c-1.2-.05-1.8-.25-2.2-.42-.6-.2-1-.5-1.4-.9-.4-.4-.7-.8-.9-1.4-.17-.4-.37-1-.42-2.2C2.21 15.6 2.2 15.2 2.2 12s0-3.6.07-4.9c.05-1.2.25-1.8.42-2.2.2-.6.5-1 .9-1.4.4-.4.8-.7 1.4-.9.4-.17 1-.37 2.2-.42C8.4 2.21 8.8 2.2 12 2.2zm0 4.86A4.94 4.94 0 1012 17a4.94 4.94 0 000-9.94zm0 8.14A3.2 3.2 0 1112 8.8a3.2 3.2 0 010 6.4zm6.3-8.35a1.15 1.15 0 11-2.3 0 1.15 1.15 0 012.3 0z"/></svg>
-          </a>
-          <a href="#" data-wa aria-label="WhatsApp">
-            <svg viewBox="0 0 24 24"><path d="M.057 24l1.687-6.163a11.867 11.867 0 01-1.587-5.946C.16 5.335 5.495 0 12.05 0a11.82 11.82 0 018.413 3.488 11.82 11.82 0 013.48 8.414c-.003 6.557-5.338 11.892-11.893 11.892a11.9 11.9 0 01-5.688-1.448L.057 24zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981z"/></svg>
-          </a>
+          <a href="https://www.instagram.com/petracoes.atacado/" target="_blank" rel="noopener" aria-label="Instagram"><svg><use href="#i-ig"/></svg></a>
+          <a href="#" data-wa aria-label="WhatsApp"><svg><use href="#i-wa"/></svg></a>
         </div>
       </div>
       <div class="foot-col">
         <h4>Produtos</h4>
-        <a href="#racoes">Rações</a><a href="#petiscos">Petiscos</a><a href="#medicamentos">Medicamentos</a><a href="#acessorios">Acessórios</a><a href="#higiene">Higiene e Limpeza</a>
+        <a href="#racoes">Rações</a><a href="#petiscos">Petiscos</a><a href="#medicamentos">Medicamentos</a><a href="#acessorios">Acessórios</a><a href="#higiene">Higiene e limpeza</a>
       </div>
       <div class="foot-col">
         <h4>Contato</h4>
@@ -683,15 +492,12 @@ footer{background:var(--navy-900);color:rgba(255,255,255,.72);padding:72px 0 28p
         <a href="https://www.instagram.com/petracoes.atacado/" target="_blank" rel="noopener">@petracoes.atacado</a>
       </div>
     </div>
-    <div class="foot-bottom">Pet Rações — Atacado e Varejo · Goiânia/GO · Aberto, fecha às 19:00</div>
+    <div class="foot-bottom"><span>© <span id="ano">2026</span> Pet Rações — Atacado e Varejo</span><span>Goiânia · GO</span></div>
   </div>
 </footer>
 
 <!-- WhatsApp flutuante -->
-<a href="#" class="wa-float" data-wa aria-label="Falar no WhatsApp">
-  <span class="ico"><svg viewBox="0 0 24 24"><path d="M.057 24l1.687-6.163a11.867 11.867 0 01-1.587-5.946C.16 5.335 5.495 0 12.05 0a11.82 11.82 0 018.413 3.488 11.82 11.82 0 013.48 8.414c-.003 6.557-5.338 11.892-11.893 11.892a11.9 11.9 0 01-5.688-1.448L.057 24zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.247-.694.247-1.289.173-1.413z"/></svg></span>
-  <span class="lbl">Fale conosco</span>
-</a>
+<a href="#" class="wa-float" data-wa aria-label="Falar no WhatsApp"><svg><use href="#i-wa"/></svg></a>
 
 <script>
 /* ===== CONFIG WHATSAPP =====
@@ -705,10 +511,7 @@ function abrirWhatsApp(el){
   window.open('https://wa.me/'+WHATSAPP+'?text='+encodeURIComponent(msg), '_blank');
 }
 document.querySelectorAll('[data-wa]').forEach(function(el){
-  el.addEventListener('click', function(e){
-    e.preventDefault();
-    abrirWhatsApp(el);
-  });
+  el.addEventListener('click', function(e){ e.preventDefault(); abrirWhatsApp(el); });
   /* acessibilidade: cards com role="button" abrem no Enter/Espaço */
   if(el.getAttribute('role')==='button'){
     el.addEventListener('keydown', function(e){
@@ -719,32 +522,21 @@ document.querySelectorAll('[data-wa]').forEach(function(el){
 
 /* Menu mobile */
 var burger=document.getElementById('burger'), menu=document.getElementById('menu');
-burger.addEventListener('click',function(){menu.classList.toggle('open')});
-menu.querySelectorAll('a').forEach(function(a){a.addEventListener('click',function(){menu.classList.remove('open')})});
+burger.addEventListener('click',function(){ var o=menu.classList.toggle('open'); burger.setAttribute('aria-expanded',o); });
+menu.querySelectorAll('a').forEach(function(a){ a.addEventListener('click',function(){ menu.classList.remove('open'); burger.setAttribute('aria-expanded',false); }); });
 
-/* Header sólido ao rolar */
+/* Borda no cabeçalho ao rolar */
 var header=document.getElementById('header');
-function onScroll(){header.classList.toggle('scrolled', window.scrollY>40)}
+function onScroll(){ header.classList.toggle('scrolled', window.scrollY>8); }
 window.addEventListener('scroll',onScroll,{passive:true}); onScroll();
 
 /* Reveal ao rolar */
-var io=new IntersectionObserver(function(es){es.forEach(function(en){if(en.isIntersecting){en.target.classList.add('show');io.unobserve(en.target)}})},{threshold:.14});
-document.querySelectorAll('.reveal').forEach(function(el){io.observe(el)});
+if('IntersectionObserver' in window){
+  var io=new IntersectionObserver(function(es){ es.forEach(function(en){ if(en.isIntersecting){ en.target.classList.add('show'); io.unobserve(en.target); } }); },{threshold:.12});
+  document.querySelectorAll('.reveal').forEach(function(el){ io.observe(el); });
+} else { document.querySelectorAll('.reveal').forEach(function(el){ el.classList.add('show'); }); }
 
-/* Contadores animados */
-function animateCount(el){
-  var target=+el.dataset.count, suf=el.dataset.suffix||'', dur=1400, start=null;
-  function step(t){ if(!start)start=t; var p=Math.min((t-start)/dur,1);
-    var ease=1-Math.pow(1-p,3);
-    el.textContent=Math.floor(ease*target).toLocaleString('pt-BR')+suf;
-    if(p<1)requestAnimationFrame(step); }
-  requestAnimationFrame(step);
-}
-var ioC=new IntersectionObserver(function(es){es.forEach(function(en){if(en.isIntersecting){animateCount(en.target);ioC.unobserve(en.target)}})},{threshold:.5});
-document.querySelectorAll('[data-count]').forEach(function(el){ioC.observe(el)});
-
-/* Marquee infinito (duplica os itens) */
-var mq=document.getElementById('marquee'); if(mq){mq.innerHTML+=mq.innerHTML;}
+document.getElementById('ano').textContent=new Date().getFullYear();
 </script>
 </body>
 </html>
