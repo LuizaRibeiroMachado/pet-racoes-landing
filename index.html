@@ -135,10 +135,13 @@ header.scrolled{border-bottom-color:var(--line);box-shadow:0 8px 24px -18px rgba
 
 /* ============ MARCAS ============ */
 .brands{border-top:1px solid var(--line);border-bottom:1px solid var(--line);background:var(--card);padding:34px 0}
-.brands-row{display:flex;align-items:center;justify-content:space-between;gap:24px 40px;flex-wrap:wrap}
-.brands-label{font-size:.78rem;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--muted);flex-shrink:0}
-.brands-list{display:flex;flex-wrap:wrap;gap:10px 34px;list-style:none;align-items:center}
-.brands-list li{font-family:var(--display);font-weight:700;font-size:1.3rem;letter-spacing:-.02em;color:var(--navy);opacity:.72}
+.brands-label{display:block;font-size:.78rem;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--muted);margin-bottom:18px}
+.brands-marquee{overflow:hidden;-webkit-mask-image:linear-gradient(90deg,transparent,#000 6%,#000 94%,transparent);mask-image:linear-gradient(90deg,transparent,#000 6%,#000 94%,transparent)}
+.brands-track{--g:14px;display:flex;gap:var(--g);width:max-content;list-style:none;animation:marcas 38s linear infinite}
+.brands-marquee:hover .brands-track{animation-play-state:paused}
+.brands-track li{font-family:var(--display);font-weight:700;font-size:1.25rem;letter-spacing:-.02em;color:var(--navy);white-space:nowrap;padding:12px 26px;border-radius:999px;border:1.5px solid transparent}
+.brands-track li:nth-child(odd){background:var(--azul);color:#fff}
+@keyframes marcas{to{transform:translateX(calc(-50% - var(--g) / 2))}}
 .brands-note{margin-top:18px;font-size:.95rem;color:var(--muted)}
 .brands-note a{color:var(--azul);font-weight:600;border-bottom:1px solid currentColor}
 .brands-note a:hover{color:var(--azul-700)}
@@ -265,8 +268,8 @@ footer{background:var(--navy-900);color:rgba(255,255,255,.7);padding:64px 0 28px
   .hero-meta{flex-direction:column;margin-top:32px;padding-top:22px}
   .hero-photo{aspect-ratio:1/1;margin-bottom:24px}
   .hero .sub{margin-bottom:24px}
-  .brands-list{gap:6px 22px}
-  .brands-list li{font-size:1.12rem}
+  .brands-track{--g:10px;animation-duration:30s}
+  .brands-track li{font-size:1.05rem;padding:10px 20px}
   .sec-head{margin-bottom:32px}
   .prod-grid{gap:12px}
   .prod .ph{padding:16px}
@@ -344,12 +347,16 @@ footer{background:var(--navy-900);color:rgba(255,255,255,.7);padding:64px 0 28px
 <!-- ============ MARCAS ============ -->
 <section class="brands" aria-label="Marcas">
   <div class="container">
-    <div class="brands-row">
-      <span class="brands-label">Marcas na loja</span>
-      <ul class="brands-list">
-        <li>SerPet</li><li>PerGatti</li><li>Fórmula Natural</li><li>Pedigree</li><li>Whiskas</li><li>Trustydog</li><li>Caozitos</li>
-      </ul>
-    </div>
+    <span class="brands-label">Marcas na loja</span>
+  </div>
+  <!-- carrossel: a lista vai 4 vezes (7 marcas é ímpar; com 14 por metade a
+       alternância azul/sem fundo fica igual dos dois lados e o laço não pula) -->
+  <div class="brands-marquee">
+    <ul class="brands-track">
+      <li>SerPet</li><li>PerGatti</li><li>Fórmula Natural</li><li>Pedigree</li><li>Whiskas</li><li>Trustydog</li><li>Caozitos</li><li aria-hidden="true">SerPet</li><li aria-hidden="true">PerGatti</li><li aria-hidden="true">Fórmula Natural</li><li aria-hidden="true">Pedigree</li><li aria-hidden="true">Whiskas</li><li aria-hidden="true">Trustydog</li><li aria-hidden="true">Caozitos</li><li aria-hidden="true">SerPet</li><li aria-hidden="true">PerGatti</li><li aria-hidden="true">Fórmula Natural</li><li aria-hidden="true">Pedigree</li><li aria-hidden="true">Whiskas</li><li aria-hidden="true">Trustydog</li><li aria-hidden="true">Caozitos</li><li aria-hidden="true">SerPet</li><li aria-hidden="true">PerGatti</li><li aria-hidden="true">Fórmula Natural</li><li aria-hidden="true">Pedigree</li><li aria-hidden="true">Whiskas</li><li aria-hidden="true">Trustydog</li><li aria-hidden="true">Caozitos</li>
+    </ul>
+  </div>
+  <div class="container">
     <p class="brands-note">Não conhece alguma dessas marcas? No <a href="https://www.instagram.com/petracoes.atacado/" target="_blank" rel="noopener" class="ig-link"><svg class="ig-ico" aria-hidden="true"><use href="#i-ig"/></svg>nosso Instagram</a> mostramos os benefícios de cada ração para o seu pet.</p>
   </div>
 </section>
