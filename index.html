@@ -4,12 +4,12 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Pet Rações — Atacado e Varejo | Tudo para o seu pet em Goiânia</title>
-<meta name="description" content="Pet Rações Atacado e Varejo em Goiânia. Rações premium, petiscos, remédios, acessórios e higiene para cães e gatos. Peça pelo WhatsApp.">
+<meta name="description" content="Pet Rações Atacado e Varejo em Goiânia. Rações premium, petiscos, remédios, acessórios e higiene para cães e gatos. Fazemos entrega a domicílio. Peça pelo WhatsApp.">
 <link rel="canonical" href="https://petracoesatacado.com.br/">
 <meta property="og:type" content="website">
 <meta property="og:locale" content="pt_BR">
 <meta property="og:title" content="Pet Rações — Atacado e Varejo">
-<meta property="og:description" content="Tudo para o seu pet, com preço de atacado e varejo. Av. Padre Wendel, 1078 — São José, Goiânia.">
+<meta property="og:description" content="Tudo para o seu pet, com preço de atacado e varejo e entrega a domicílio. Av. Padre Wendel, 1078 — São José, Goiânia.">
 <meta property="og:url" content="https://petracoesatacado.com.br/">
 <meta property="og:image" content="https://petracoesatacado.com.br/assets/loja-corredor.jpeg">
 <meta name="theme-color" content="#0B2A4A">
@@ -142,6 +142,10 @@ header.scrolled{border-bottom-color:var(--line);box-shadow:0 8px 24px -18px rgba
 .brands-note{margin-top:18px;font-size:.95rem;color:var(--muted)}
 .brands-note a{color:var(--azul);font-weight:600;border-bottom:1px solid currentColor}
 .brands-note a:hover{color:var(--azul-700)}
+.pedir{display:block;margin-top:6px;font-size:.78rem;font-weight:600;color:var(--zap-700,#128C4B);letter-spacing:.005em}
+.prod:hover .pedir,.cat:hover .pedir{text-decoration:underline;text-underline-offset:2px}
+.brands-note a.ig-link{display:inline-flex;align-items:center;gap:5px;vertical-align:bottom}
+.ig-ico{width:1.05em;height:1.05em;fill:currentColor;flex-shrink:0}
 
 /* ============ RAÇÕES ============ */
 .racoes-grid{display:grid;grid-template-columns:.95fr 1.05fr;gap:clamp(40px,6vw,80px);align-items:center}
@@ -225,6 +229,15 @@ footer{background:var(--navy-900);color:rgba(255,255,255,.7);padding:64px 0 28px
 @media (max-width:1000px){
   .hero-grid,.racoes-grid,.contato-grid{grid-template-columns:1fr}
   .hero-photo{aspect-ratio:4/3;max-height:520px}
+  /* empilhado: título e subtítulo, depois a foto, depois os botões */
+  .hero-grid{row-gap:0}
+  .hero-text{display:contents}
+  .hero-text .eyebrow{order:1;justify-self:start}
+  .hero h1{order:2}
+  .hero .sub{order:3;margin-bottom:28px}
+  .hero-photo{order:4;margin-bottom:28px}
+  .hero-btns{order:5}
+  .hero-meta{order:6}
   .cat-grid{grid-template-columns:1fr 1fr}
   .cat:last-child{grid-column:1/-1}
   .cat:last-child .img{aspect-ratio:16/9}
@@ -250,7 +263,8 @@ footer{background:var(--navy-900);color:rgba(255,255,255,.7);padding:64px 0 28px
   .hero h1{font-size:2.35rem}
   .hero-btns .btn{flex:1 1 100%}
   .hero-meta{flex-direction:column;margin-top:32px;padding-top:22px}
-  .hero-photo{aspect-ratio:4/5}
+  .hero-photo{aspect-ratio:1/1;margin-bottom:24px}
+  .hero .sub{margin-bottom:24px}
   .brands-list{gap:6px 22px}
   .brands-list li{font-size:1.12rem}
   .sec-head{margin-bottom:32px}
@@ -306,7 +320,7 @@ footer{background:var(--navy-900);color:rgba(255,255,255,.7);padding:64px 0 28px
 <!-- ============ HERO ============ -->
 <section class="hero" id="topo">
   <div class="container hero-grid">
-    <div>
+    <div class="hero-text">
       <span class="eyebrow reveal">Pet shop em Goiânia</span>
       <h1 class="reveal d1">Tudo para o seu pet, com preço de <em>atacado e varejo</em></h1>
       <p class="sub reveal d2">Tudo o que o seu cão e o seu gato precisam em um só lugar: ração, petiscos, remédios, acessórios e higiene.</p>
@@ -317,6 +331,7 @@ footer{background:var(--navy-900);color:rgba(255,255,255,.7);padding:64px 0 28px
       <div class="hero-meta reveal d3">
         <span><svg viewBox="0 0 24 24"><path d="M12 21s-7-6.2-7-11a7 7 0 1114 0c0 4.8-7 11-7 11z"/><circle cx="12" cy="10" r="2.5"/></svg>Av. Padre Wendel, 1078 — São José</span>
         <span><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>Atendimento até as 19h</span>
+        <span><svg viewBox="0 0 24 24"><path d="M1 5h13v11H1zM14 9h4l4 4v3h-8z"/><circle cx="5.5" cy="18" r="2"/><circle cx="17.5" cy="18" r="2"/></svg>Entrega a domicílio</span>
       </div>
     </div>
     <figure class="hero-photo reveal d2">
@@ -335,7 +350,7 @@ footer{background:var(--navy-900);color:rgba(255,255,255,.7);padding:64px 0 28px
         <li>SerPet</li><li>PerGatti</li><li>Fórmula Natural</li><li>Pedigree</li><li>Whiskas</li><li>Trustydog</li><li>Caozitos</li>
       </ul>
     </div>
-    <p class="brands-note">Não conhece alguma dessas marcas? No <a href="https://www.instagram.com/petracoes.atacado/" target="_blank" rel="noopener">nosso Instagram</a> mostramos os benefícios de cada ração para o seu pet.</p>
+    <p class="brands-note">Não conhece alguma dessas marcas? No <a href="https://www.instagram.com/petracoes.atacado/" target="_blank" rel="noopener" class="ig-link"><svg class="ig-ico" aria-hidden="true"><use href="#i-ig"/></svg>nosso Instagram</a> mostramos os benefícios de cada ração para o seu pet.</p>
   </div>
 </section>
 
@@ -354,21 +369,21 @@ footer{background:var(--navy-900);color:rgba(255,255,255,.7);padding:64px 0 28px
       <a href="#" class="btn btn-azul" data-wa="Olá! Quero saber sobre as rações disponíveis.">Consultar rações no WhatsApp</a>
     </div>
     <div class="prod-grid">
-      <div class="prod reveal" role="button" tabindex="0" data-wa="Olá! Vi a ração Fórmula Natural (Super Premium) na landing page e gostaria de mais informações.">
+      <div class="prod reveal" role="button" tabindex="0" data-wa="Olá! Vi a ração Fórmula Natural (Super Premium) no site e gostaria de fazer um pedido." data-p="formula-natural">
         <div class="ph"><img loading="lazy" decoding="async" src="assets/racao-formula-natural.png" alt="Ração Fórmula Natural Life Super Premium para cães"></div>
-        <div class="lb"><b>Fórmula Natural</b><span>Super Premium · Cães</span></div>
+        <div class="lb"><b>Fórmula Natural</b><span>Super Premium · Cães</span><small class="pedir">Clique aqui e faça seu pedido</small></div>
       </div>
-      <div class="prod reveal d1" role="button" tabindex="0" data-wa="Olá! Vi a ração SerPet Sênior (Super Premium) na landing page e gostaria de mais informações.">
+      <div class="prod reveal d1" role="button" tabindex="0" data-wa="Olá! Vi a ração SerPet Sênior (Super Premium) no site e gostaria de fazer um pedido." data-p="serpet-senior">
         <div class="ph"><img loading="lazy" decoding="async" src="assets/racao-serpet.png" alt="Ração SerPet Super Premium Sênior para cães"></div>
-        <div class="lb"><b>SerPet Sênior</b><span>Super Premium · Cães</span></div>
+        <div class="lb"><b>SerPet Sênior</b><span>Super Premium · Cães</span><small class="pedir">Clique aqui e faça seu pedido</small></div>
       </div>
-      <div class="prod reveal d1" role="button" tabindex="0" data-wa="Olá! Vi a ração PerGatti (Super Premium, para gatos) na landing page e gostaria de mais informações.">
+      <div class="prod reveal d1" role="button" tabindex="0" data-wa="Olá! Vi a ração PerGatti (Super Premium, para gatos) no site e gostaria de fazer um pedido." data-p="pergatti">
         <div class="ph"><img loading="lazy" decoding="async" src="assets/racao-pergatti.png" alt="Ração PerGatti Super Premium para gatos sabor salmão"></div>
-        <div class="lb"><b>PerGatti</b><span>Super Premium · Gatos</span></div>
+        <div class="lb"><b>PerGatti</b><span>Super Premium · Gatos</span><small class="pedir">Clique aqui e faça seu pedido</small></div>
       </div>
-      <div class="prod reveal d2" role="button" tabindex="0" data-wa="Olá! Vi a ração Trustydog (Premium Especial) na landing page e gostaria de mais informações.">
+      <div class="prod reveal d2" role="button" tabindex="0" data-wa="Olá! Vi a ração Trustydog (Premium Especial) no site e gostaria de fazer um pedido." data-p="trustydog">
         <div class="ph"><img loading="lazy" decoding="async" src="assets/racao-trustydog.png" alt="Rações Trustydog Premium Especial para cães"></div>
-        <div class="lb"><b>Trustydog</b><span>Premium Especial · Cães</span></div>
+        <div class="lb"><b>Trustydog</b><span>Premium Especial · Cães</span><small class="pedir">Clique aqui e faça seu pedido</small></div>
       </div>
     </div>
   </div>
@@ -383,41 +398,41 @@ footer{background:var(--navy-900);color:rgba(255,255,255,.7);padding:64px 0 28px
       <p>Estes são só alguns exemplos. Na loja tem muito mais opções, é só chamar no WhatsApp.</p>
     </div>
     <div class="cat-grid">
-      <div class="cat reveal" id="petiscos" role="button" tabindex="0" data-wa="Olá! Vi os petiscos na landing page e gostaria de mais informações.">
+      <div class="cat reveal" id="petiscos" role="button" tabindex="0" data-wa="Olá! Vi os petiscos no site e gostaria de fazer um pedido." data-p="petiscos">
         <div class="img"><img loading="lazy" decoding="async" src="assets/petisco-caolitos.jpeg" alt="Petiscos Caozitos sabor frango na prateleira da loja" width="750" height="1000" style="object-position:50% 45%"></div>
-        <div class="body"><h3>Petiscos</h3><span class="go" aria-hidden="true"><svg><use href="#i-seta"/></svg></span></div>
+        <div class="body"><div><h3>Petiscos</h3><small class="pedir">Clique aqui e faça seu pedido</small></div><span class="go" aria-hidden="true"><svg><use href="#i-seta"/></svg></span></div>
       </div>
-      <div class="cat reveal d1" role="button" tabindex="0" data-wa="Olá! Vi o sachê para gatos na landing page e gostaria de mais informações.">
+      <div class="cat reveal d1" role="button" tabindex="0" data-wa="Olá! Vi o sachê para gatos no site e gostaria de fazer um pedido." data-p="sache-gatos">
         <div class="img"><img loading="lazy" decoding="async" src="assets/sache-whiskas.jpeg" alt="Sachê Whiskas sabor carne ao molho para gatos adultos" width="750" height="1000" style="object-position:50% 45%"></div>
-        <div class="body"><h3>Sachê para gatos</h3><span class="go" aria-hidden="true"><svg><use href="#i-seta"/></svg></span></div>
+        <div class="body"><div><h3>Sachê para gatos</h3><small class="pedir">Clique aqui e faça seu pedido</small></div><span class="go" aria-hidden="true"><svg><use href="#i-seta"/></svg></span></div>
       </div>
-      <div class="cat reveal d2" role="button" tabindex="0" data-wa="Olá! Vi o sachê para cães na landing page e gostaria de mais informações.">
+      <div class="cat reveal d2" role="button" tabindex="0" data-wa="Olá! Vi o sachê para cães no site e gostaria de fazer um pedido." data-p="sache-caes">
         <div class="img"><img loading="lazy" decoding="async" src="assets/sache-pedigree.jpeg" alt="Sachê Pedigree para cães adultos" width="750" height="1000" style="object-position:50% 45%"></div>
-        <div class="body"><h3>Sachê para cães</h3><span class="go" aria-hidden="true"><svg><use href="#i-seta"/></svg></span></div>
+        <div class="body"><div><h3>Sachê para cães</h3><small class="pedir">Clique aqui e faça seu pedido</small></div><span class="go" aria-hidden="true"><svg><use href="#i-seta"/></svg></span></div>
       </div>
-      <div class="cat reveal" role="button" tabindex="0" data-wa="Olá! Vi a areia higiênica na landing page e gostaria de mais informações.">
+      <div class="cat reveal" role="button" tabindex="0" data-wa="Olá! Vi a areia higiênica no site e gostaria de fazer um pedido." data-p="areia-higienica">
         <div class="img"><img loading="lazy" decoding="async" src="assets/areia-higienica.jpeg" alt="Areia e granulado higiênico para gatos na prateleira" width="750" height="1000" style="object-position:50% 60%"></div>
-        <div class="body"><h3>Areia higiênica</h3><span class="go" aria-hidden="true"><svg><use href="#i-seta"/></svg></span></div>
+        <div class="body"><div><h3>Areia higiênica</h3><small class="pedir">Clique aqui e faça seu pedido</small></div><span class="go" aria-hidden="true"><svg><use href="#i-seta"/></svg></span></div>
       </div>
-      <div class="cat reveal d1" id="medicamentos" role="button" tabindex="0" data-wa="Olá! Vi os medicamentos e vitaminas na landing page e gostaria de mais informações.">
+      <div class="cat reveal d1" id="medicamentos" role="button" tabindex="0" data-wa="Olá! Vi os medicamentos e vitaminas no site e gostaria de fazer um pedido." data-p="medicamentos">
         <div class="img"><img loading="lazy" decoding="async" src="assets/medicamentos.jpeg" alt="Prateleira de medicamentos pet: vitaminas, antiparasitário, antibiótico e anti-inflamatório" width="750" height="1000" style="object-position:50% 50%"></div>
-        <div class="body"><h3>Medicamentos e vitaminas</h3><span class="go" aria-hidden="true"><svg><use href="#i-seta"/></svg></span></div>
+        <div class="body"><div><h3>Medicamentos e vitaminas</h3><small class="pedir">Clique aqui e faça seu pedido</small></div><span class="go" aria-hidden="true"><svg><use href="#i-seta"/></svg></span></div>
       </div>
-      <div class="cat reveal d2" role="button" tabindex="0" data-wa="Olá! Vi os antipulgas e carrapatos na landing page e gostaria de mais informações.">
+      <div class="cat reveal d2" role="button" tabindex="0" data-wa="Olá! Vi os antipulgas e carrapatos no site e gostaria de fazer um pedido." data-p="antipulgas">
         <div class="img"><img loading="lazy" decoding="async" src="assets/frontmax.jpeg" alt="Coleiras antiparasitárias FrontMax contra pulgas e carrapatos" width="750" height="1000" style="object-position:50% 65%"></div>
-        <div class="body"><h3>Antipulgas e carrapatos</h3><span class="go" aria-hidden="true"><svg><use href="#i-seta"/></svg></span></div>
+        <div class="body"><div><h3>Antipulgas e carrapatos</h3><small class="pedir">Clique aqui e faça seu pedido</small></div><span class="go" aria-hidden="true"><svg><use href="#i-seta"/></svg></span></div>
       </div>
-      <div class="cat reveal" id="acessorios" role="button" tabindex="0" data-wa="Olá! Vi as coleiras, guias e caminhas na landing page e gostaria de mais informações.">
+      <div class="cat reveal" id="acessorios" role="button" tabindex="0" data-wa="Olá! Vi as coleiras, guias e caminhas no site e gostaria de fazer um pedido." data-p="coleiras-caminhas">
         <div class="img"><img loading="lazy" decoding="async" src="assets/acessorios-coleiras.jpeg" alt="Parede com coleiras, guias, peitorais e caminhas para pets" width="750" height="1000" style="object-position:50% 50%"></div>
-        <div class="body"><h3>Coleiras, guias e caminhas</h3><span class="go" aria-hidden="true"><svg><use href="#i-seta"/></svg></span></div>
+        <div class="body"><div><h3>Coleiras, guias e caminhas</h3><small class="pedir">Clique aqui e faça seu pedido</small></div><span class="go" aria-hidden="true"><svg><use href="#i-seta"/></svg></span></div>
       </div>
-      <div class="cat reveal d1" role="button" tabindex="0" data-wa="Olá! Vi os comedouros e bebedouros na landing page e gostaria de mais informações.">
+      <div class="cat reveal d1" role="button" tabindex="0" data-wa="Olá! Vi os comedouros e bebedouros no site e gostaria de fazer um pedido." data-p="comedouros">
         <div class="img"><img loading="lazy" decoding="async" src="assets/acessorios-comedouros.jpeg" alt="Comedouros, bebedouros automáticos e colares elizabetanos" width="750" height="1000" style="object-position:50% 50%"></div>
-        <div class="body"><h3>Comedouros e bebedouros</h3><span class="go" aria-hidden="true"><svg><use href="#i-seta"/></svg></span></div>
+        <div class="body"><div><h3>Comedouros e bebedouros</h3><small class="pedir">Clique aqui e faça seu pedido</small></div><span class="go" aria-hidden="true"><svg><use href="#i-seta"/></svg></span></div>
       </div>
-      <div class="cat reveal d2" id="higiene" role="button" tabindex="0" data-wa="Olá! Vi os produtos de higiene e limpeza na landing page e gostaria de mais informações.">
+      <div class="cat reveal d2" id="higiene" role="button" tabindex="0" data-wa="Olá! Vi os produtos de higiene e limpeza no site e gostaria de fazer um pedido." data-p="higiene">
         <div class="img"><img loading="lazy" decoding="async" src="assets/higiene.jpeg" alt="Eliminadores de odores e produtos de higiene e limpeza para pets" width="750" height="1000" style="object-position:50% 50%"></div>
-        <div class="body"><h3>Higiene e limpeza</h3><span class="go" aria-hidden="true"><svg><use href="#i-seta"/></svg></span></div>
+        <div class="body"><div><h3>Higiene e limpeza</h3><small class="pedir">Clique aqui e faça seu pedido</small></div><span class="go" aria-hidden="true"><svg><use href="#i-seta"/></svg></span></div>
       </div>
     </div>
   </div>
@@ -428,7 +443,7 @@ footer{background:var(--navy-900);color:rgba(255,255,255,.7);padding:64px 0 28px
   <div class="container cta-grid">
     <div>
       <h2>Faça seu pedido agora</h2>
-      <p>Atendimento rápido e tudo para o seu pet num só lugar. É só chamar no WhatsApp.</p>
+      <p>Atendimento rápido, tudo para o seu pet num só lugar e <strong>entrega a domicílio</strong>. É só chamar no WhatsApp.</p>
     </div>
     <a href="#" class="btn btn-zap btn-lg" data-wa><svg class="ico"><use href="#i-wa"/></svg>Falar no WhatsApp</a>
   </div>
@@ -439,7 +454,7 @@ footer{background:var(--navy-900);color:rgba(255,255,255,.7);padding:64px 0 28px
   <div class="container">
     <div class="sec-head">
       <span class="eyebrow">Contato e localização</span>
-      <h2>Venha nos visitar ou peça pelo WhatsApp</h2>
+      <h2>Venha nos visitar ou peça pelo WhatsApp e receba em casa</h2>
       <p>Estamos de portas abertas em Goiânia, prontos para atender você e o seu pet.</p>
     </div>
     <div class="contato-grid">
@@ -455,6 +470,10 @@ footer{background:var(--navy-900);color:rgba(255,255,255,.7);padding:64px 0 28px
         <div class="info-row">
           <div class="ic"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg></div>
           <div><b>Horário</b><span>Atendimento até as 19h</span></div>
+        </div>
+        <div class="info-row">
+          <div class="ic"><svg viewBox="0 0 24 24"><path d="M1 5h13v11H1zM14 9h4l4 4v3h-8z"/><circle cx="5.5" cy="18" r="2"/><circle cx="17.5" cy="18" r="2"/></svg></div>
+          <div><b>Entrega a domicílio</b><span>Peça pelo WhatsApp e receba em casa</span></div>
         </div>
         <div class="info-row">
           <div class="ic"><svg viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1.1" fill="var(--azul)" stroke="none"/></svg></div>
@@ -504,10 +523,14 @@ footer{background:var(--navy-900);color:rgba(255,255,255,.7);padding:64px 0 28px
    Formato: 55 (Brasil) + DDD + número (só dígitos).
    Número da loja (fixo com WhatsApp), confirmado em 29/09/2026. */
 var WHATSAPP = "556239011359";
+var SITE = "https://petracoesatacado.com.br";
 var MSG_PADRAO = "Olá! Vim pelo site da Pet Rações e gostaria de fazer um pedido.";
 
 function abrirWhatsApp(el){
   var msg = el.getAttribute('data-wa') || MSG_PADRAO;
+  /* link da página do produto: o WhatsApp mostra a foto dele na prévia */
+  var p = el.getAttribute('data-p');
+  if(p) msg += '\n\n' + SITE + '/p/' + p;
   window.open('https://wa.me/'+WHATSAPP+'?text='+encodeURIComponent(msg), '_blank');
 }
 document.querySelectorAll('[data-wa]').forEach(function(el){
