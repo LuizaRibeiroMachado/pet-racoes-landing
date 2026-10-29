@@ -166,6 +166,12 @@ header.scrolled{border-bottom-color:var(--line);box-shadow:0 8px 24px -18px rgba
 .prod .lb{padding:14px 16px 16px;border-top:1px solid var(--line)}
 .prod .lb b{font-family:var(--display);font-weight:700;font-size:1.08rem;letter-spacing:-.015em;display:block;line-height:1.25}
 .prod .lb span{font-size:.84rem;color:var(--muted)}
+.racoes-mais{margin-top:40px}
+.filtro-especie{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:18px}
+.filtro-especie button{font:inherit;font-weight:600;font-size:.92rem;padding:8px 18px;border-radius:999px;border:1px solid var(--line);background:var(--card);color:inherit;cursor:pointer;transition:background .2s,color .2s,border-color .2s}
+.filtro-especie button[aria-selected="true"]{background:var(--azul,#0B2A4A);border-color:var(--azul,#0B2A4A);color:#fff}
+.prod-grid-mais{grid-template-columns:repeat(auto-fill,minmax(190px,1fr))}
+.prod-grid-mais .prod[hidden]{display:none}
 
 /* ============ CATEGORIAS ============ */
 .cat-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
@@ -394,6 +400,125 @@ footer{background:var(--navy-900);color:rgba(255,255,255,.7);padding:64px 0 28px
       </div>
     </div>
   </div>
+
+  <!-- Mais rações (29/10/2026): as linhas Nutritop e SerPet Nutrition que a loja vende. Filtro Cães/Gatos. -->
+  <div class="container racoes-mais">
+    <div class="filtro-especie" role="tablist" aria-label="Filtrar rações">
+      <button type="button" role="tab" aria-selected="true" data-filtro="todas">Todas</button>
+      <button type="button" role="tab" aria-selected="false" data-filtro="caes">Cães</button>
+      <button type="button" role="tab" aria-selected="false" data-filtro="gatos">Gatos</button>
+    </div>
+    <div class="prod-grid prod-grid-mais">
+      <div class="prod reveal" role="button" tabindex="0" data-especie="caes" data-wa="Olá! Vi a ração Multidog Premium Filhotes no site e gostaria de fazer um pedido." data-p="multidog-premium-filhotes">
+        <div class="ph"><img loading="lazy" decoding="async" src="assets/racoes/multidog-premium-filhotes.webp" alt="Ração Multidog Premium Filhotes para cães"></div>
+        <div class="lb"><b>Multidog Premium Filhotes</b><span>Premium · Cães</span><small class="pedir">Clique aqui e faça seu pedido</small></div>
+      </div>
+      <div class="prod reveal" role="button" tabindex="0" data-especie="caes" data-wa="Olá! Vi a ração Tuko no site e gostaria de fazer um pedido." data-p="tuko">
+        <div class="ph"><img loading="lazy" decoding="async" src="assets/racoes/tuko.webp" alt="Ração Tuko para cães"></div>
+        <div class="lb"><b>Tuko</b><span>Cães</span><small class="pedir">Clique aqui e faça seu pedido</small></div>
+      </div>
+      <div class="prod reveal" role="button" tabindex="0" data-especie="caes" data-wa="Olá! Vi a ração Multidog Premium no site e gostaria de fazer um pedido." data-p="multidog-premium">
+        <div class="ph"><img loading="lazy" decoding="async" src="assets/racoes/multidog-premium.webp" alt="Ração Multidog Premium para cães"></div>
+        <div class="lb"><b>Multidog Premium</b><span>Premium · Cães</span><small class="pedir">Clique aqui e faça seu pedido</small></div>
+      </div>
+      <div class="prod reveal" role="button" tabindex="0" data-especie="caes" data-wa="Olá! Vi a ração Multidog Premium Raças Pequenas e Médias no site e gostaria de fazer um pedido." data-p="multidog-premium-racas-pequenas-e-medias">
+        <div class="ph"><img loading="lazy" decoding="async" src="assets/racoes/multidog-premium-racas-pequenas-e-medias.webp" alt="Ração Multidog Premium Raças Pequenas e Médias para cães"></div>
+        <div class="lb"><b>Multidog Premium Raças Pequenas e Médias</b><span>Premium · Cães</span><small class="pedir">Clique aqui e faça seu pedido</small></div>
+      </div>
+      <div class="prod reveal" role="button" tabindex="0" data-especie="caes" data-wa="Olá! Vi a ração Multidog Premium Especial no site e gostaria de fazer um pedido." data-p="multidog-premium-especial">
+        <div class="ph"><img loading="lazy" decoding="async" src="assets/racoes/multidog-premium-especial.webp" alt="Ração Multidog Premium Especial para cães"></div>
+        <div class="lb"><b>Multidog Premium Especial</b><span>Premium Especial · Cães</span><small class="pedir">Clique aqui e faça seu pedido</small></div>
+      </div>
+      <div class="prod reveal" role="button" tabindex="0" data-especie="caes" data-wa="Olá! Vi a ração Come e Lambe no site e gostaria de fazer um pedido." data-p="come-e-lambe">
+        <div class="ph"><img loading="lazy" decoding="async" src="assets/racoes/come-e-lambe.webp" alt="Ração Come e Lambe para cães"></div>
+        <div class="lb"><b>Come e Lambe</b><span>Cães</span><small class="pedir">Clique aqui e faça seu pedido</small></div>
+      </div>
+      <div class="prod reveal" role="button" tabindex="0" data-especie="caes" data-wa="Olá! Vi a ração Tuko Premium no site e gostaria de fazer um pedido." data-p="tuko-premium">
+        <div class="ph"><img loading="lazy" decoding="async" src="assets/racoes/tuko-premium.webp" alt="Ração Tuko Premium para cães"></div>
+        <div class="lb"><b>Tuko Premium</b><span>Premium · Cães</span><small class="pedir">Clique aqui e faça seu pedido</small></div>
+      </div>
+      <div class="prod reveal" role="button" tabindex="0" data-especie="caes" data-wa="Olá! Vi a ração Come e Lambe Pequeno e Médio Porte no site e gostaria de fazer um pedido." data-p="come-e-lambe-pequeno-e-medio-porte">
+        <div class="ph"><img loading="lazy" decoding="async" src="assets/racoes/come-e-lambe-pequeno-e-medio-porte.webp" alt="Ração Come e Lambe Pequeno e Médio Porte para cães"></div>
+        <div class="lb"><b>Come e Lambe Pequeno e Médio Porte</b><span>Cães</span><small class="pedir">Clique aqui e faça seu pedido</small></div>
+      </div>
+      <div class="prod reveal" role="button" tabindex="0" data-especie="caes" data-wa="Olá! Vi a ração Chacalzinho no site e gostaria de fazer um pedido." data-p="chacalzinho">
+        <div class="ph"><img loading="lazy" decoding="async" src="assets/racoes/chacalzinho.webp" alt="Ração Chacalzinho para cães"></div>
+        <div class="lb"><b>Chacalzinho</b><span>Cães</span><small class="pedir">Clique aqui e faça seu pedido</small></div>
+      </div>
+      <div class="prod reveal" role="button" tabindex="0" data-especie="caes" data-wa="Olá! Vi a ração PerCane Adulto Todas as Raças no site e gostaria de fazer um pedido." data-p="percane-adulto-todas-as-racas">
+        <div class="ph"><img loading="lazy" decoding="async" src="assets/racoes/percane-adulto-todas-as-racas.webp" alt="Ração PerCane Adulto Todas as Raças para cães"></div>
+        <div class="lb"><b>PerCane Adulto Todas as Raças</b><span>Super Premium · Cães</span><small class="pedir">Clique aqui e faça seu pedido</small></div>
+      </div>
+      <div class="prod reveal" role="button" tabindex="0" data-especie="caes" data-wa="Olá! Vi a ração Trustydog Adultos Raças Pequenas no site e gostaria de fazer um pedido." data-p="trustydog-adultos-racas-pequenas">
+        <div class="ph"><img loading="lazy" decoding="async" src="assets/racoes/trustydog-adultos-racas-pequenas.webp" alt="Ração Trustydog Adultos Raças Pequenas para cães"></div>
+        <div class="lb"><b>Trustydog Adultos Raças Pequenas</b><span>Premium Especial · Cães</span><small class="pedir">Clique aqui e faça seu pedido</small></div>
+      </div>
+      <div class="prod reveal" role="button" tabindex="0" data-especie="caes" data-wa="Olá! Vi a ração Trustydog Adultos Todas as Raças no site e gostaria de fazer um pedido." data-p="trustydog-adultos-todas-as-racas">
+        <div class="ph"><img loading="lazy" decoding="async" src="assets/racoes/trustydog-adultos-todas-as-racas.webp" alt="Ração Trustydog Adultos Todas as Raças para cães"></div>
+        <div class="lb"><b>Trustydog Adultos Todas as Raças</b><span>Premium Especial · Cães</span><small class="pedir">Clique aqui e faça seu pedido</small></div>
+      </div>
+      <div class="prod reveal" role="button" tabindex="0" data-especie="caes" data-wa="Olá! Vi a ração Trustydog Filhotes Todas as Raças no site e gostaria de fazer um pedido." data-p="trustydog-filhotes-todas-as-racas">
+        <div class="ph"><img loading="lazy" decoding="async" src="assets/racoes/trustydog-filhotes-todas-as-racas.webp" alt="Ração Trustydog Filhotes Todas as Raças para cães"></div>
+        <div class="lb"><b>Trustydog Filhotes Todas as Raças</b><span>Premium Especial · Cães</span><small class="pedir">Clique aqui e faça seu pedido</small></div>
+      </div>
+      <div class="prod reveal" role="button" tabindex="0" data-especie="caes" data-wa="Olá! Vi a ração Trustydog Power Training Adultos no site e gostaria de fazer um pedido." data-p="trustydog-power-training-adultos">
+        <div class="ph"><img loading="lazy" decoding="async" src="assets/racoes/trustydog-power-training-adultos.webp" alt="Ração Trustydog Power Training Adultos para cães"></div>
+        <div class="lb"><b>Trustydog Power Training Adultos</b><span>Premium Especial · Cães</span><small class="pedir">Clique aqui e faça seu pedido</small></div>
+      </div>
+      <div class="prod reveal" role="button" tabindex="0" data-especie="caes" data-wa="Olá! Vi a ração Trustydog Power Training Filhotes no site e gostaria de fazer um pedido." data-p="trustydog-power-training-filhotes">
+        <div class="ph"><img loading="lazy" decoding="async" src="assets/racoes/trustydog-power-training-filhotes.webp" alt="Ração Trustydog Power Training Filhotes para cães"></div>
+        <div class="lb"><b>Trustydog Power Training Filhotes</b><span>Premium Especial · Cães</span><small class="pedir">Clique aqui e faça seu pedido</small></div>
+      </div>
+      <div class="prod reveal" role="button" tabindex="0" data-especie="caes" data-wa="Olá! Vi a ração Jack Pet Adultos Raças Pequenas e Médias no site e gostaria de fazer um pedido." data-p="jack-pet-adultos-racas-pequenas-e-medias">
+        <div class="ph"><img loading="lazy" decoding="async" src="assets/racoes/jack-pet-adultos-racas-pequenas-e-medias.webp" alt="Ração Jack Pet Adultos Raças Pequenas e Médias para cães"></div>
+        <div class="lb"><b>Jack Pet Adultos Raças Pequenas e Médias</b><span>Premium Line · Cães</span><small class="pedir">Clique aqui e faça seu pedido</small></div>
+      </div>
+      <div class="prod reveal" role="button" tabindex="0" data-especie="caes" data-wa="Olá! Vi a ração Jack Pet Filhotes Todas as Raças no site e gostaria de fazer um pedido." data-p="jack-pet-filhotes-todas-as-racas">
+        <div class="ph"><img loading="lazy" decoding="async" src="assets/racoes/jack-pet-filhotes-todas-as-racas.webp" alt="Ração Jack Pet Filhotes Todas as Raças para cães"></div>
+        <div class="lb"><b>Jack Pet Filhotes Todas as Raças</b><span>Premium Line · Cães</span><small class="pedir">Clique aqui e faça seu pedido</small></div>
+      </div>
+      <div class="prod reveal" role="button" tabindex="0" data-especie="caes" data-wa="Olá! Vi a ração Hockey Premium Adultos no site e gostaria de fazer um pedido." data-p="hockey-premium-adultos">
+        <div class="ph"><img loading="lazy" decoding="async" src="assets/racoes/hockey-premium-adultos.webp" alt="Ração Hockey Premium Adultos para cães"></div>
+        <div class="lb"><b>Hockey Premium Adultos</b><span>Premium · Cães</span><small class="pedir">Clique aqui e faça seu pedido</small></div>
+      </div>
+      <div class="prod reveal" role="button" tabindex="0" data-especie="gatos" data-wa="Olá! Vi a ração Unicat Atum no site e gostaria de fazer um pedido." data-p="unicat-atum">
+        <div class="ph"><img loading="lazy" decoding="async" src="assets/racoes/unicat-atum.webp" alt="Ração Unicat Atum para gatos"></div>
+        <div class="lb"><b>Unicat Atum</b><span>Gatos</span><small class="pedir">Clique aqui e faça seu pedido</small></div>
+      </div>
+      <div class="prod reveal" role="button" tabindex="0" data-especie="gatos" data-wa="Olá! Vi a ração Unicat Mix no site e gostaria de fazer um pedido." data-p="unicat-mix">
+        <div class="ph"><img loading="lazy" decoding="async" src="assets/racoes/unicat-mix.webp" alt="Ração Unicat Mix para gatos"></div>
+        <div class="lb"><b>Unicat Mix</b><span>Gatos</span><small class="pedir">Clique aqui e faça seu pedido</small></div>
+      </div>
+      <div class="prod reveal" role="button" tabindex="0" data-especie="gatos" data-wa="Olá! Vi a ração Multicat Premium Gatos Castrados no site e gostaria de fazer um pedido." data-p="multicat-premium-gatos-castrados">
+        <div class="ph"><img loading="lazy" decoding="async" src="assets/racoes/multicat-premium-gatos-castrados.webp" alt="Ração Multicat Premium Gatos Castrados para gatos"></div>
+        <div class="lb"><b>Multicat Premium Gatos Castrados</b><span>Premium · Gatos</span><small class="pedir">Clique aqui e faça seu pedido</small></div>
+      </div>
+      <div class="prod reveal" role="button" tabindex="0" data-especie="gatos" data-wa="Olá! Vi a ração Multicat Premium Especial Gatos Castrados Salmão no site e gostaria de fazer um pedido." data-p="multicat-premium-especial-gatos-castrados-salmao">
+        <div class="ph"><img loading="lazy" decoding="async" src="assets/racoes/multicat-premium-especial-gatos-castrados-salmao.webp" alt="Ração Multicat Premium Especial Gatos Castrados Salmão para gatos"></div>
+        <div class="lb"><b>Multicat Premium Especial Gatos Castrados Salmão</b><span>Premium Especial · Gatos</span><small class="pedir">Clique aqui e faça seu pedido</small></div>
+      </div>
+      <div class="prod reveal" role="button" tabindex="0" data-especie="gatos" data-wa="Olá! Vi a ração Come e Lambe Cats Mix no site e gostaria de fazer um pedido." data-p="come-e-lambe-cats-mix">
+        <div class="ph"><img loading="lazy" decoding="async" src="assets/racoes/come-e-lambe-cats-mix.webp" alt="Ração Come e Lambe Cats Mix para gatos"></div>
+        <div class="lb"><b>Come e Lambe Cats Mix</b><span>Gatos</span><small class="pedir">Clique aqui e faça seu pedido</small></div>
+      </div>
+      <div class="prod reveal" role="button" tabindex="0" data-especie="gatos" data-wa="Olá! Vi a ração PerGatti Filhote Frango no site e gostaria de fazer um pedido." data-p="pergatti-filhote-frango">
+        <div class="ph"><img loading="lazy" decoding="async" src="assets/racoes/pergatti-filhote-frango.webp" alt="Ração PerGatti Filhote Frango para gatos"></div>
+        <div class="lb"><b>PerGatti Filhote Frango</b><span>Super Premium · Gatos</span><small class="pedir">Clique aqui e faça seu pedido</small></div>
+      </div>
+      <div class="prod reveal" role="button" tabindex="0" data-especie="gatos" data-wa="Olá! Vi a ração Trustycat Adulto Salmão no site e gostaria de fazer um pedido." data-p="trustycat-adulto-salmao">
+        <div class="ph"><img loading="lazy" decoding="async" src="assets/racoes/trustycat-adulto-salmao.webp" alt="Ração Trustycat Adulto Salmão para gatos"></div>
+        <div class="lb"><b>Trustycat Adulto Salmão</b><span>Premium Especial · Gatos</span><small class="pedir">Clique aqui e faça seu pedido</small></div>
+      </div>
+      <div class="prod reveal" role="button" tabindex="0" data-especie="gatos" data-wa="Olá! Vi a ração Jack Cat Adulto no site e gostaria de fazer um pedido." data-p="jack-cat-adulto">
+        <div class="ph"><img loading="lazy" decoding="async" src="assets/racoes/jack-cat-adulto.webp" alt="Ração Jack Cat Adulto para gatos"></div>
+        <div class="lb"><b>Jack Cat Adulto</b><span>Premium Line · Gatos</span><small class="pedir">Clique aqui e faça seu pedido</small></div>
+      </div>
+      <div class="prod reveal" role="button" tabindex="0" data-especie="gatos" data-wa="Olá! Vi a ração Jack Cat Castrados no site e gostaria de fazer um pedido." data-p="jack-cat-castrados">
+        <div class="ph"><img loading="lazy" decoding="async" src="assets/racoes/jack-cat-castrados.webp" alt="Ração Jack Cat Castrados para gatos"></div>
+        <div class="lb"><b>Jack Cat Castrados</b><span>Premium Line · Gatos</span><small class="pedir">Clique aqui e faça seu pedido</small></div>
+      </div>
+    </div>
+  </div>
 </section>
 
 <!-- ============ CATEGORIAS ============ -->
@@ -548,6 +673,15 @@ document.querySelectorAll('[data-wa]').forEach(function(el){
       if(e.key==='Enter' || e.key===' '){ e.preventDefault(); abrirWhatsApp(el); }
     });
   }
+});
+
+/* Filtro Cães/Gatos das rações */
+document.querySelectorAll('.filtro-especie button').forEach(function(b){
+  b.addEventListener('click',function(){
+    var f=b.getAttribute('data-filtro');
+    document.querySelectorAll('.filtro-especie button').forEach(function(x){ x.setAttribute('aria-selected', x===b ? 'true' : 'false'); });
+    document.querySelectorAll('.prod-grid-mais .prod').forEach(function(c){ c.hidden = f!=='todas' && c.getAttribute('data-especie')!==f; });
+  });
 });
 
 /* Menu mobile */
